@@ -1,0 +1,34 @@
+This is a project demonstrating next framework (a Java/GWT mobile framework for Smartphones and Tablets using HTML5 and MVC).
+
+More information:
+============
+  http://nextinterfaces.com/
+ 
+
+Documentation:
+============
+  http://nextinterfaces.com/DOCS
+ 
+
+Demo:
+============
+  http:/nextinterfaces.com/DEMO
+
+
+Dependencies:
+============
+  Java5+
+  GWT2.2+
+  
+
+Supported:
+============
+  WebKit Browsers(for now): iOS, iPhone, Android, BlackBerry O6+, PlayBook, HP webOS, Samsung bada
+
+ 
+Installation
+============
+  Copy the nextinterfaces.jar file(nextinterfaces/war/WEB-INF/nextinterfaces.jar) to your project and 
+  add it to your classpath.
+
+  See the attached demo project for more information.
