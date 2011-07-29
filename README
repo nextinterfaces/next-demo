@@ -23,7 +23,6 @@ Supported:
  
 Installation
 ============
-  Copy the nextinterfaces.jar file(nextinterfaces/war/WEB-INF/nextinterfaces.jar) to your project and 
-  add it to your classpath.
+  Copy next.jar file(nextinterfaces/war/WEB-INF/next.jar) to your project and add it to your classpath.
 
   See the attached demo project for more information.
