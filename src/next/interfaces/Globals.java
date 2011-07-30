@@ -17,6 +17,6 @@ package next.interfaces;
 
 public interface Globals {
 
-	String GIT_HOST = "https://github.com/ywebb/gwt-touch-demo/blob/master/src/next/demo";
+	String GIT_HOST = "https://github.com/nextinterfaces/next-Demo/tree/master/src/next/interfaces";
 
 }
