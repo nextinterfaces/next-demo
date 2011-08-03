@@ -34,7 +34,7 @@ public class ButtonsController extends GitXController {
 	public IsWidget getViewContent() {
 		XFlexTable panel = new XFlexTable();
 		// panel.setCellSpacing(30);
-		panel.getElement().getStyle().setProperty("paddingLeft", "140px");
+		panel.getElement().getStyle().setProperty("paddingLeft", "100px");
 
 		XButton btnDefault = new XButton("Rounded Default");
 		XButton btnNav = new XButton("Navigation", XButtonType.Navigation);
