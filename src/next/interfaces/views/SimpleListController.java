@@ -19,6 +19,9 @@ import next.i.view.XTableCell;
 import next.i.view.XTableView;
 import next.interfaces.controller.GitXController;
 
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.IsWidget;
 
 public class SimpleListController extends GitXController {
@@ -31,18 +34,33 @@ public class SimpleListController extends GitXController {
 	public IsWidget getViewContent() {
 
 		XTableView tableView = new XTableView();
-		for (int i = 0; i < 5; i++) {
-			XTableCell cell = new XTableCell("List Item " + i);
-			tableView.addItem(cell);
-//			cell.showChevron(true);
-//			cell.addClickHandler(new ClickHandler() {
-//				public void onClick(ClickEvent event) {
-//					Window.alert("I was clicked.");
-//				}
-//			});
-		}
+
+		XTableCell c0 = new XTableCell("British Columbia");
+		XTableCell c1 = new XTableCell("California");
+		XTableCell c2 = new XTableCell("Minnesota");
+		XTableCell c3 = new XTableCell("New Jersey");
+		XTableCell c4 = new XTableCell("Oregon");
+		XTableCell c5 = new XTableCell("Washington");
+		XTableCell c6 = new XTableCell("Quebec");
+
+		add(tableView, c0, c1, c2, c3, c4, c5, c6);
 
 		return tableView;
+	}
+
+	private void add(XTableView view, XTableCell... cells) {
+		for (XTableCell c : cells) {
+
+			view.addItem(c);
+//			c.showChevron(true);
+			c.addClickHandler(new ClickHandler() {
+				public void onClick(ClickEvent e) {
+					XTableCell cell = (XTableCell)e.getSource();
+					Window.alert(cell.getTitle());
+				}
+			});
+
+		}
 	}
 
 	public String getGitPath() {
