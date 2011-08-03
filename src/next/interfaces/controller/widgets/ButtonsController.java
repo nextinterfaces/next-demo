@@ -16,15 +16,13 @@
 package next.interfaces.controller.widgets;
 
 import next.i.view.widgets.XButton;
-import next.i.view.widgets.XFlexTable;
 import next.i.view.widgets.XButton.XButtonType;
+import next.i.view.widgets.XFlexTable;
 import next.interfaces.controller.GitXController;
 
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.IsWidget;
+import com.google.gwt.user.client.ui.SimplePanel;
 
 public class ButtonsController extends GitXController {
 
@@ -35,41 +33,23 @@ public class ButtonsController extends GitXController {
 	@Override
 	public IsWidget getViewContent() {
 		XFlexTable panel = new XFlexTable();
-		panel.setCellSpacing(30);
+		// panel.setCellSpacing(30);
+		panel.getElement().getStyle().setProperty("paddingLeft", "140px");
 
 		XButton btnDefault = new XButton("Rounded Default");
 		XButton btnNav = new XButton("Navigation", XButtonType.Navigation);
 		XButton btnShadow = new XButton("Shadow", XButtonType.Shadow);
 
 		XButton btnAdd = new XButton("Add", XButtonType.Add);
-		XButton btnDisclLeft = new XButton("Disclosure", XButtonType.Disclosure);
-		XButton btnDark = new XButton("InfoDark", XButtonType.InfoDark);
-		XButton btnLight = new XButton("InfoLight", XButtonType.InfoLight);
-
-		XButton btnAddRight = new XButton("Add ", XButtonType.Add, false);
 		XButton btnDisclRight = new XButton("Disclosure", XButtonType.Disclosure, false);
-		XButton btnDarkRight = new XButton("InfoDark", XButtonType.InfoDark, false);
-		XButton btnLightRight = new XButton("InfoLight", XButtonType.InfoLight, false);
 
 		panel.addWidgets(HasHorizontalAlignment.ALIGN_LEFT, btnDefault, btnNav, btnShadow, btnAdd, btnDisclRight);
 
-//		ClickHandler handler = new ClickHandler() {
-//			public void onClick(ClickEvent e) {
-//				Window.alert("Hello. I was tapped.");
-//			}
-//		};
-//
-//		addClickHandler(handler, btnDefault, btnNav, btnShadow, btnAdd, btnDisclLeft, btnDark, btnLight, btnAddRight,
-//				btnDisclRight, btnDarkRight, btnLightRight);
-
-		return panel;
+		SimplePanel wrapper = new SimplePanel();
+		wrapper.setHeight("100%");
+		wrapper.add(panel);
+		return wrapper;
 	}
-
-//	private void addClickHandler(ClickHandler handler, XButton... btns) {
-//		for (XButton b : btns) {
-//			b.addClickHandler(handler);
-//		}
-//	}
 
 	public String getGitPath() {
 		return "/controller/widgets/ButtonsController";
