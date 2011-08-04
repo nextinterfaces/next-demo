@@ -44,9 +44,10 @@ public class WidgetsController extends XTableController {
 		((XTableView) getView()).showChevron(true);
 
 		XTableDataSource tableDS = new XTableDataSource();
-		tableDS.add("Button", "Slider", "Picker", "Switch", "Progress", "CheckBox", "Radio Button", "Form",
-				"Label and Image", "List", "Navigation"
-//				, "Custom List"
+		tableDS.add("Lists", "Slider", "Picker", "Switch", "Progress", "CheckBox", "Radio Button", "Form",
+				"Label and Image", "Button", "Navigation"
+				
+//				, "List"
 //				, "Slide"
 				);
 
@@ -57,7 +58,7 @@ public class WidgetsController extends XTableController {
 	public void onRowSelected(int indexSelected, String titleSelected, XTableCell tableCell) {
 
 		if (indexSelected == 0) {
-			getNavigationController().pushController(new ButtonsController(), true);
+			getNavigationController().pushController(new CustomListController(), true);
 
 		} else if (indexSelected == 1) {
 			getNavigationController().pushController(new SliderController(), true);
@@ -84,15 +85,12 @@ public class WidgetsController extends XTableController {
 			getNavigationController().pushController(new LabelImageController(), true);
 
 		} else if (indexSelected == 9) {
-			getNavigationController().pushController(new SimpleListController(), true);
+			getNavigationController().pushController(new ButtonsController (), true);
 
 		} else if (indexSelected == 10) {
 			getNavigationController().pushController(new NavigationBarController(), true);
 
 		} else if (indexSelected == 11) {
-			getNavigationController().pushController(new CustomListController(), true);
-
-		} else if (indexSelected == 12) {
 			getNavigationController().pushController(new SlideController(), true);
 		}
 

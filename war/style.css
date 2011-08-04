@@ -34,8 +34,7 @@ body {
 	width: 100%;
 	height: 100%;
 	background: #8195AF;
-	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#B0BCCD),
-		color-stop(0.5, #889BB3), color-stop(0.5, #8195AF), to(#6D84A2) );
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#B0BCCD), color-stop(0.5, #889BB3), color-stop(0.5, #8195AF), to(#6D84A2) );
 	border-top: 1px solid #CDD5DF;
 	border-bottom: 1px solid #2D3642;
 	z-index: 10;
@@ -133,10 +132,9 @@ body {
 	border-top: 1px solid #000;
 	border-bottom: 1px solid #000;
 	background: #151515;
-	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#434343),
-		color-stop(0.01, #434343), color-stop(0.01, #2e2e2e), color-stop(0.5, #151515),
-		color-stop(0.5, #000), to(#000) );
-	padding: 0 2px;	
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#434343), color-stop(0.01, #434343), color-stop(0.01, #2e2e2e), color-stop(0.5, #151515), color-stop(0.5, #000),
+		to(#000) );
+	padding: 0 2px;
 }
 
 .tab {
@@ -145,8 +143,7 @@ body {
 
 .tab.selected {
 	background: #363636;
-	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#494949),
-		color-stop(0.5, #363636), color-stop(0.5, #252525), to(#252525) );
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#494949), color-stop(0.5, #363636), color-stop(0.5, #252525), to(#252525) );
 	border-radius: 3px;
 }
 
@@ -208,18 +205,26 @@ body {
 .tableCell {
 	border-bottom: 1px solid #ccc;
 	color: #000;
-	padding: 10px;
 	vertical-align: middle;
 	white-space: nowrap;
 	font-weight: bold;
 	font-size: 1.2em;
 	background-color: #fff;
 	position: relative;
+	width: 100%;
+}
+
+table.tableCell {
+	border-spacing: 10px;
+}
+
+div.tableCell {
+	padding: 10px;
 }
 
 .tableCell.selected {
 	background: #0375ED;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #058CF5), color-stop(1, #015EE6));
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #058CF5), color-stop(1, #015EE6) );
 	color: #fff;
 }
 
@@ -231,8 +236,7 @@ body {
 
 .tableCell.selected.chevron {
 	background-image: url("images/chevronSelected.png");
-	background-image: url("images/chevronSelected.png"),
-		-webkit-gradient(linear, left top, left bottom, color-stop(0, #058CF5), color-stop(1, #015EE6));
+	background-image: url("images/chevronSelected.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0, #058CF5), color-stop(1, #015EE6) );
 }
 
 .tableCellImage {
@@ -244,7 +248,9 @@ body {
 }
 
 .tableCellAccessory {
-	
+	font-size: 70%;
+	color: gray;
+	font-weight: normal;
 }
 
 .scrollPanel {
@@ -340,8 +346,7 @@ body {
 
 .xbutton.Rounded.selected {
 	border: 1px solid #5987B0;
-	background: -webkit-gradient(linear, left top, left bottom, from(#058CF5),
-		to(#015FE6) );
+	background: -webkit-gradient(linear, left top, left bottom, from(#058CF5), to(#015FE6) );
 }
 
 .xbutton.Rounded.selected .body {
@@ -382,8 +387,7 @@ body {
 	font-weight: bold;
 	color: #444;
 	text-shadow: 0 1px 1px #F6F6F6;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FDFDFD),
-		color-stop(1, #EEE) );
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FDFDFD), color-stop(1, #EEE) );
 	-moz-border-radius: 1em;
 	-webkit-border-radius: 1em;
 	border-radius: 1em;
@@ -401,8 +405,7 @@ body {
 
 .xbutton.Shadow.selected {
 	border: 1px solid #5987B0;
-	background: -webkit-gradient(linear, left top, left bottom, from(#058CF5),
-		to(#015FE6) );
+	background: -webkit-gradient(linear, left top, left bottom, from(#058CF5), to(#015FE6) );
 	text-shadow: 0 -1px 1px #333;
 }
 
@@ -594,7 +597,7 @@ body {
 .xslider .bar {
 	position: relative;
 	height: 1.2em;
-	min-width: 10em;
+	min-width: 7em;
 	margin: 0 .5em 0 .5em;
 	display: -webkit-box;
 	-webkit-box-flex: 1;
@@ -605,8 +608,7 @@ body {
 	top: .4em;
 	width: 100%;
 	border-radius: .3em;
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#BABABA),
-		to(#fff) );
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#BABABA), to(#fff) );
 	border: 1px solid #B3B3B3;
 	height: .5em;
 	-webkit-background-clip: content !important;
@@ -617,8 +619,7 @@ body {
 	top: .4em;
 	border-top-left-radius: .3em;
 	border-bottom-left-radius: .3em;
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4570AA),
-		to(#63A1F3) );
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4570AA), to(#63A1F3) );
 	float: left;
 	border: 1px solid #366094;
 	height: .5em;
@@ -627,7 +628,7 @@ body {
 
 .xslider .thumb {
 	position: relative;
-	margin: -9px 0 0 -18px;
+	margin: -8px 0 0 -18px;
 	width: 36px;
 	height: 36px;
 	background-image: url(images/xsliderThumb.png);
@@ -706,8 +707,7 @@ input,textarea,keygen,select,button,isindex,datagrid {
 	text-align: -webkit-auto;
 }
 
-input::-webkit-input-placeholder,isindex::-webkit-input-placeholder,textarea::-webkit-input-placeholder
-	{
+input::-webkit-input-placeholder,isindex::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
 	color: darkGray;
 }
 
@@ -793,8 +793,7 @@ input::-webkit-outer-spin-button {
 	top: .4em;
 	width: 100%;
 	border-radius: .3em;
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#BABABA),
-		to(#fff) );
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#BABABA), to(#fff) );
 	border: 1px solid #B3B3B3;
 	height: .5em;
 	-webkit-background-clip: content !important;
@@ -804,8 +803,7 @@ input::-webkit-outer-spin-button {
 	position: relative;
 	top: .4em;
 	border-radius: .3em;
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ADC7EB),
-		to(#2676D6) );
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ADC7EB), to(#2676D6) );
 	/*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4570AA),
 		to(#63A1F3) ); */
 	float: left;
@@ -843,8 +841,7 @@ input::-webkit-outer-spin-button {
 	font-weight: bold;
 	color: #444;
 	text-shadow: 0 1px 1px #F6F6F6;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FDFDFD),
-		color-stop(1, #EEE) );
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FDFDFD), color-stop(1, #EEE) );
 	-moz-border-radius: 1em;
 	-webkit-border-radius: 1em;
 	border-radius: 1em;
@@ -907,8 +904,7 @@ input::-webkit-outer-spin-button {
 	-webkit-box-align: center;
 	-webkit-box-pack: center;
 	padding: .5em .1em;
-	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#FCFCFC),
-		to(#C8C8C8) );
+	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#FCFCFC), to(#C8C8C8) );
 	text-shadow: #fff 0px 1px 1px;
 	color: #7F7F7F;
 	font-size: 1.2em;
@@ -919,11 +915,9 @@ input::-webkit-outer-spin-button {
 	border-bottom: 1px solid #999;
 }
 
-.xcheckboxGroup.horizontal>span.selected,.xradioButtonGroup.horizontal>span.selected
-	{
-	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2655A6),
-		color-stop(0.08, #336FD4), color-stop(0.08, #3571D9),
-		color-stop(0.5, #3D81E9), color-stop(0.5, #498AEB), to(#6EA9FB) );
+.xcheckboxGroup.horizontal>span.selected,.xradioButtonGroup.horizontal>span.selected {
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2655A6), color-stop(0.08, #336FD4), color-stop(0.08, #3571D9), color-stop(0.5, #3D81E9), color-stop(0.5, #498AEB),
+		to(#6EA9FB) );
 	border-top-color: #073E7D;
 	border-left-color: #3871B2;
 	border-right-color: #4082CB;
@@ -932,8 +926,7 @@ input::-webkit-outer-spin-button {
 	text-shadow: #14519B 0px -1px 1px;
 }
 
-.xcheckboxGroup.horizontal>span>input,.xcheckboxGroup.horizontal>span>div,.xradioButtonGroup.horizontal>span>input,.xradioButtonGroup.horizontal>span>div
-	{
+.xcheckboxGroup.horizontal>span>input,.xcheckboxGroup.horizontal>span>div,.xradioButtonGroup.horizontal>span>input,.xradioButtonGroup.horizontal>span>div {
 	display: none;
 }
 
@@ -955,16 +948,14 @@ input::-webkit-outer-spin-button {
 	border-right: 1px solid #B8B8B8;
 }
 
-.xcheckboxGroup>span:first-child.selected,.xradioButtonGroup>span:first-child.selected
-	{
+.xcheckboxGroup>span:first-child.selected,.xradioButtonGroup>span:first-child.selected {
 	border-right: 0px;
 	border-top-color: #073E7D;
 	border-bottom-color: #5077A2;
 	border-left-color: #2F6FB8;
 }
 
-.xcheckboxGroup>span:last-child.selected,.xradioButtonGroup>span:last-child.selected
-	{
+.xcheckboxGroup>span:last-child.selected,.xradioButtonGroup>span:last-child.selected {
 	border-left: 0px;
 	border-top-color: #073E7D;
 	border-bottom-color: #5077A2;
@@ -995,8 +986,7 @@ input::-webkit-outer-spin-button {
 	border-bottom: 0;
 }
 
-.xcheckboxGroup.vertical>span>input,.xradioButtonGroup.vertical>span>input
-	{
+.xcheckboxGroup.vertical>span>input,.xradioButtonGroup.vertical>span>input {
 	display: none;
 }
 
@@ -1030,36 +1020,31 @@ input::-webkit-outer-spin-button {
 	padding-right: 10px;
 }
 
-.xcheckboxGroup.vertical>span:first-child,.xradioButtonGroup.vertical>span:first-child
-	{
+.xcheckboxGroup.vertical>span:first-child,.xradioButtonGroup.vertical>span:first-child {
 	border-bottom-left-radius: 0;
 	border-top-right-radius: 0.6em 0.6em;
 }
 
-.xcheckboxGroup.vertical>span:last-child,.xradioButtonGroup.vertical>span:last-child
-	{
+.xcheckboxGroup.vertical>span:last-child,.xradioButtonGroup.vertical>span:last-child {
 	border-bottom-left-radius: 0.6em 0.6em;
 	border-top-right-radius: 0;
 }
 
-.xcheckboxGroup.vertical>span:first-child.selected,.xradioButtonGroup.vertical>span:first-child.selected
-	{
+.xcheckboxGroup.vertical>span:first-child.selected,.xradioButtonGroup.vertical>span:first-child.selected {
 	border-bottom: 0;
 	border-top: 1px solid #ccc;
 	border-left: 1px solid #ccc;
 	border-right: 1px solid #ccc;
 }
 
-.xcheckboxGroup.vertical>span:last-child,.xradioButtonGroup.vertical>span:last-child
-	{
+.xcheckboxGroup.vertical>span:last-child,.xradioButtonGroup.vertical>span:last-child {
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 	border-left: 1px solid #ccc;
 	border-right: 1px solid #ccc;
 }
 
-.xcheckboxGroup.vertical>span:last-child.selected,.xradioButtonGroup.vertical>span:last-child.selected
-	{
+.xcheckboxGroup.vertical>span:last-child.selected,.xradioButtonGroup.vertical>span:last-child.selected {
 	border-color: #ccc;
 }
 
