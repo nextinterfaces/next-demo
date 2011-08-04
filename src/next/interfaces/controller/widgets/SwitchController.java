@@ -36,7 +36,7 @@ public class SwitchController extends GitXController {
 		panel.setCellSpacing(40);
 
 		final HTML label = new HTML("Switch is OFF");
-		XSwitch switchBtn = new XSwitch(false);
+		XSwitch switchBtn = new XSwitch(true);
 		switchBtn.addValueChangeHandler(new ValueChangeHandler<Boolean>() {			
 			@Override
 			public void onValueChange(ValueChangeEvent<Boolean> e) {

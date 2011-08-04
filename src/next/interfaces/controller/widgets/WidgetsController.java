@@ -44,8 +44,8 @@ public class WidgetsController extends XTableController {
 		((XTableView) getView()).showChevron(true);
 
 		XTableDataSource tableDS = new XTableDataSource();
-		tableDS.add("Lists", "Slider", "Picker", "Switch", "Progress", "CheckBox", "Radio Button", "Form",
-				"Label and Image", "Button", "Navigation"
+		tableDS.add("Lists", "Slider", "Radio Button", "Buttons", "Picker", "Switch", "Form", "Progress", "CheckBox", 
+				"Label and Image", "Navigation"
 				
 //				, "List"
 //				, "Slide"
@@ -64,28 +64,28 @@ public class WidgetsController extends XTableController {
 			getNavigationController().pushController(new SliderController(), true);
 
 		} else if (indexSelected == 2) {
-			getNavigationController().pushController(new PickerController(), true);
-
-		} else if (indexSelected == 3) {
-			getNavigationController().pushController(new SwitchController(), true);
-
-		} else if (indexSelected == 4) {
-			getNavigationController().pushController(new ProgressController(), true);
-
-		} else if (indexSelected == 5) {
-			getNavigationController().pushController(new CheckboxController(), true);
-
-		} else if (indexSelected == 6) {
 			getNavigationController().pushController(new RadioButtonController(), true);
 
-		} else if (indexSelected == 7) {
+		} else if (indexSelected == 3) {
+			getNavigationController().pushController(new ButtonsController (), true);
+
+		} else if (indexSelected == 4) {
+			getNavigationController().pushController(new PickerController(), true);
+
+		} else if (indexSelected == 5) {
+			getNavigationController().pushController(new SwitchController(), true);
+
+		} else if (indexSelected == 6) {
 			getNavigationController().pushController(new FormController(), true);
 
+		} else if (indexSelected == 7) {
+			getNavigationController().pushController(new ProgressController(), true);
+
 		} else if (indexSelected == 8) {
-			getNavigationController().pushController(new LabelImageController(), true);
+			getNavigationController().pushController(new CheckboxController(), true);
 
 		} else if (indexSelected == 9) {
-			getNavigationController().pushController(new ButtonsController (), true);
+			getNavigationController().pushController(new LabelImageController(), true);
 
 		} else if (indexSelected == 10) {
 			getNavigationController().pushController(new NavigationBarController(), true);

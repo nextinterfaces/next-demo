@@ -56,6 +56,9 @@ public class RadioButtonController extends GitXController {
 		final XLabel label1 = new XLabel("Favorite color", XLabelType.Header);
 		final XLabel label2 = new XLabel("Favorite color", XLabelType.Header);
 
+		radio0.setValue(true);
+		radioA.setValue(true);
+		
 		group1.addSelectionChangedHandler(new SelectionChangedHandler() {
 			public void onSelectionChanged(SelectionChangedEvent e) {
 				label1.setText("Favorite color: " + group1.getCheckedWidget().getName());

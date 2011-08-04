@@ -57,6 +57,11 @@ public class CheckboxController extends GitXController {
 
 		panel.addWidgets(label2, group2, label1, group1, new HTML("&nbsp;"));
 
+		check0.setValue(true);
+		check1.setValue(true);
+		checkA.setValue(true);
+		checkC.setValue(true);
+		
 		group1.addSelectionChangedHandler(new SelectionChangedHandler() {
 			public void onSelectionChanged(SelectionChangedEvent e) {
 				String s = "Favorite color: ";
