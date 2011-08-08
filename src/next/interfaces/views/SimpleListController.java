@@ -35,15 +35,15 @@ public class SimpleListController extends GitXController {
 
 		XTableView tableView = new XTableView();
 
-		XTableCell c0 = new XTableCell("British Columbia");
-		XTableCell c1 = new XTableCell("California");
-		XTableCell c2 = new XTableCell("Minnesota");
-		XTableCell c3 = new XTableCell("New Jersey");
-		XTableCell c4 = new XTableCell("Oregon");
-		XTableCell c5 = new XTableCell("Washington");
-		XTableCell c6 = new XTableCell("Quebec");
+//		XTableCell c0 = new XTableCell("British Columbia");
+//		XTableCell c1 = new XTableCell("California");
+//		XTableCell c2 = new XTableCell("Minnesota");
+//		XTableCell c3 = new XTableCell("New Jersey");
+//		XTableCell c4 = new XTableCell("Oregon");
+//		XTableCell c5 = new XTableCell("Washington");
+//		XTableCell c6 = new XTableCell("Quebec");
 
-		add(tableView, c0, c1, c2, c3, c4, c5, c6);
+//		add(tableView, c0, c1, c2, c3, c4, c5, c6);
 
 		return tableView;
 	}

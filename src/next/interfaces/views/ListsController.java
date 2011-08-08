@@ -17,7 +17,8 @@ package next.interfaces.views;
 
 import next.i.controller.XTableController;
 import next.i.view.XTableCell;
-import next.i.view.XTableDataSource;
+import next.i.view.CellData;
+import next.i.view.TableData;
 import next.i.view.XTableView;
 import next.interfaces.controller.DemoUtils;
 
@@ -39,14 +40,14 @@ public class ListsController extends XTableController {
 
 		((XTableView) getView()).showChevron(true);
 
-		XTableDataSource tableDS = new XTableDataSource();
+		TableData tableDS = new TableData();
 		tableDS.add("List", "Navigation Bar", "Custom List", "Slide panels");
 
 		initDataSource(tableDS);
 	}
 
 	@Override
-	public void onRowSelected(int indexSelected, String titleSelected, XTableCell tableCell) {
+	public void onRowSelected(int indexSelected, CellData cellDataSelected, XTableCell tableCell) {
 
 		if (indexSelected == 0) {
 			getNavigationController().pushController(new SimpleListController(), true);

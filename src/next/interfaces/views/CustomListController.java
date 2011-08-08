@@ -15,8 +15,8 @@
  */
 package next.interfaces.views;
 
+import next.i.view.CellData;
 import next.i.view.XTableCell;
-import next.i.view.XTableCellData;
 import next.i.view.XTableView;
 import next.i.view.widgets.XSlider;
 import next.i.view.widgets.XSwitch;
@@ -35,25 +35,25 @@ public class CustomListController extends GitXController {
 	@Override
 	public IsWidget getViewContent() {
 
-		XTableCellData d0 = new XTableCellData();
+		CellData d0 = new CellData();
 		d0.setWestWidgets(new Image("images/icons/list0.png"));
 		d0.setTextWidgets(new Label("Ariplane Mode"));
 		d0.setEastWidgets(new XSwitch(true));
 		XTableCell c0 = new XTableCell(d0);
 
-		XTableCellData d1 = new XTableCellData();
+		CellData d1 = new CellData();
 		d1.setWestWidgets(new Image("images/icons/list1.png"));
 		d1.setTextWidgets(new Label("WI-FI"));
-		d1.setEastWidgets(new Image("images/icons/list1a.png"));
+		d1.setEastWidgets(new Image("images/icons/list1x.png"));
 		XTableCell c1 = new XTableCell(d1);
 
-		XTableCellData d2 = new XTableCellData();
+		CellData d2 = new CellData();
 		d2.setWestWidgets(new Image("images/icons/list2.png"));
 		d2.setTextWidgets(new Label("Notifications"));
-		d2.setEastWidgets(new Image("images/icons/list2a.png"));
+		d2.setEastWidgets(new Image("images/icons/list2x.png"));
 		XTableCell c2 = new XTableCell(d2);
 
-		XTableCellData d3 = new XTableCellData();
+		CellData d3 = new CellData();
 		d3.setWestWidgets(new Image("images/icons/list3.png"));
 		d3.setTextWidgets(new Label("Sound"));
 		d3.setEastWidgets(new XSlider(60));
