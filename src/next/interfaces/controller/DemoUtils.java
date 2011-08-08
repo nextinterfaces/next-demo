@@ -15,30 +15,28 @@
  */
 package next.interfaces.controller;
 
-
-import java.util.ArrayList;
-
 import next.i.util.Utils;
+import next.i.view.CellData;
 import next.interfaces.Globals;
-
 
 public class DemoUtils {
 
-	public static String[] DATA;
+	public static CellData[] DATA;
 
 	static {
 		DATA = populate();
 	}
 
-	private static String[] populate() {
-		ArrayList<String> list = new ArrayList<String>();
-		for (int i = 0; i < 31; i++) {
-			list.add(i + " list item");
-		}
+	private static CellData[] populate() {
 
-		String[] arr = new String[list.size()];
-		for (int i = 0; i < list.size(); i++) {
-			arr[i] = list.get(i);
+		String[] names = { "Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Costa Rica", "Cuba",
+				"Dominican Republic", "Ecuador", "El Salvador", "Guatemala", "Honduras", "Mexico", "Nicaragua", "Panama",
+				"Paraguay", "Peru", "Puerto Rico", "Uruguay", "Venezuela" };
+
+		int len = names.length;
+		CellData[] arr = new CellData[len];
+		for (int i = 0; i < len; i++) {
+			arr[i] = new CellData(names[i]);
 		}
 
 		return arr;

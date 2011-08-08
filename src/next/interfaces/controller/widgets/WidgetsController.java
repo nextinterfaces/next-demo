@@ -16,17 +16,18 @@
 package next.interfaces.controller.widgets;
 
 import next.i.controller.XTableController;
+import next.i.view.CellData;
+import next.i.view.TableData;
 import next.i.view.XTableCell;
-import next.i.view.XTableDataSource;
 import next.i.view.XTableView;
 import next.interfaces.controller.DemoUtils;
 import next.interfaces.views.CustomListController;
 import next.interfaces.views.NavigationBarController;
-import next.interfaces.views.SimpleListController;
 import next.interfaces.views.SlideController;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.ui.Image;
 
 public class WidgetsController extends XTableController {
 
@@ -43,19 +44,27 @@ public class WidgetsController extends XTableController {
 
 		((XTableView) getView()).showChevron(true);
 
-		XTableDataSource tableDS = new XTableDataSource();
-		tableDS.add("Lists", "Slider", "Radio Button", "Buttons", "Picker", "Switch", "Form", "Progress", "CheckBox", 
-				"Label and Image", "Navigation"
-				
-//				, "List"
-//				, "Slide"
+		TableData tableDS = new TableData();
+		tableDS.add(
+				new CellData(new Image("images/icons/i-list.png"), "Lists", null),
+				new CellData(new Image("images/icons/i-slider.png"), "Slider", null),
+				new CellData(new Image("images/icons/i-radio.png"), "Radio Button", null),
+				new CellData(new Image("images/icons/i-button.png"), "Buttons", null),
+				new CellData(new Image("images/icons/i-picker.png"), "Picker", null),
+				new CellData(new Image("images/icons/i-switch.png"), "Switch", null),
+				new CellData(new Image("images/icons/i-form.png"), "Form", null),
+				new CellData(new Image("images/icons/i-progress.png"), "Progress", null),
+				new CellData(new Image("images/icons/i-checkbox.png"), "CheckBox", null),
+				new CellData(new Image("images/icons/i-image.png"), "Label and Image", null),
+				new CellData(new Image("images/icons/i-navigation.png"), "Navigation", null)
 				);
+//				, "Slide"
 
 		initDataSource(tableDS);
 	}
 
 	@Override
-	public void onRowSelected(int indexSelected, String titleSelected, XTableCell tableCell) {
+	public void onRowSelected(int indexSelected, CellData cellDataSelected, XTableCell tableCell) {
 
 		if (indexSelected == 0) {
 			getNavigationController().pushController(new CustomListController(), true);

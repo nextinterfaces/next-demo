@@ -16,7 +16,7 @@
 package next.interfaces.controller;
 
 import next.i.controller.XTableController;
-import next.i.view.XTableDataSource;
+import next.i.view.TableData;
 
 public class HelloWorldController extends XTableController {
 
@@ -24,7 +24,7 @@ public class HelloWorldController extends XTableController {
 
 		setTitle("Hello World");
 
-		XTableDataSource tableDS = new XTableDataSource();
+		TableData tableDS = new TableData();
 		tableDS.add("Hello", "World");
 
 		initDataSource(tableDS);

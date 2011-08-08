@@ -16,7 +16,7 @@
 package next.interfaces.controller;
 
 import next.i.controller.XTableController;
-import next.i.view.XTableDataSource;
+import next.i.view.TableData;
 
 public class TestTableCtrl extends XTableController {
 
@@ -24,7 +24,7 @@ public class TestTableCtrl extends XTableController {
 
 		setTitle("TestTableCtrl");
 
-		XTableDataSource tableDS = new XTableDataSource();
+		TableData tableDS = new TableData();
 		for (int i = 0; i < 100; i++) {
 			tableDS.add(i + " ctrl");
 		}

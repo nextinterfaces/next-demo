@@ -16,8 +16,9 @@
 package next.interfaces.controller.animation;
 
 import next.i.controller.XController;
-import next.i.view.XTableDataSource;
 import next.i.view.XBarItem.Type;
+import next.i.view.CellData;
+import next.i.view.TableData;
 import next.interfaces.controller.DemoUtils;
 import next.interfaces.controller.GitXTableController;
 
@@ -38,13 +39,13 @@ public class FlipController extends GitXTableController {
 			}
 		});
 
-		XTableDataSource tableDS = new XTableDataSource();
+		TableData tableDS = new TableData();
 		tableDS.add(data());
 
 		initDataSource(tableDS);
 	}
 
-	private String[] data() {
+	private CellData[] data() {
 		return DemoUtils.DATA;
 	}
 
