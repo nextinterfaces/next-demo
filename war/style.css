@@ -219,7 +219,7 @@ table.tableCell {
 }
 
 div.tableCell {
-	padding: 10px;
+	padding: 10px 0;
 }
 
 .tableCell.selected {
@@ -239,12 +239,20 @@ div.tableCell {
 	background-image: url("images/chevronSelected.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0, #058CF5), color-stop(1, #015EE6) );
 }
 
-.tableCellImage {
-	
+.tableCellWestImage {
+	position: absolute;
+	top: 50%;
+	left: 10px;
 }
 
-.tableCellContent {
-	
+.tableCellEastImage {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+}
+
+.tableCellTitle {
+	margin-left: 10px;
 }
 
 .tableCellAccessory {
