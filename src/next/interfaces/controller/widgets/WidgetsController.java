@@ -100,7 +100,11 @@ public class WidgetsController extends XTableController {
 			getNavigationController().pushController(new NavigationBarController(), true);
 
 		} else if (indexSelected == 11) {
+			getNavigationController().pushController(new PopupController(), true);
+			
+		} else if (indexSelected == 100) {
 			getNavigationController().pushController(new SlideController(), true);
+			
 		}
 
 	}

@@ -1056,7 +1056,38 @@ input::-webkit-outer-spin-button {
 	border-color: #ccc;
 }
 
-/* 
+/*****************************
+ * xpopup
+ *****************************/
+.xpopup-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 90;
+	background: RGBA(0,0,0,.4);
+}
+
+.xpopup {
+	position: absolute;
+	border: 4px solid #2D3642;
+	padding: 6px;
+	-webkit-border-radius: 0.3em;
+	border-radius: 0.3em;
+	background-color: #fff;
+	z-index: 100;
+	-webkit-box-shadow: RGBA(0, 0, 0, 0.8) 0 0.2em 0.6em;
+	box-shadow: RGBA(0, 0, 0, 0.8) 0 0.2em 0.6em;
+}
+
+.xpopup pre {
+	text-align: left;
+	color: #666;
+}
+
+/******* Borrowed from gwtmobile-ui ****** TODO cleanup
+
 .Android .xcheckboxGroup > span,
 .Android .xradioButtonGroup > span {
 	-webkit-box-shadow: 0 0 1px #666;	// android radius antialias workaround

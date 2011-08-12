@@ -22,7 +22,6 @@ package next.interfaces;
 import next.i.controller.XNavigationController;
 import next.i.controller.XTabBarController;
 import next.i.controller.XTabController;
-import next.interfaces.controller.DemoWidgetsController;
 import next.interfaces.controller.animation.TransitionsController;
 import next.interfaces.controller.widgets.WidgetsController;
 
@@ -34,35 +33,28 @@ import com.google.gwt.user.client.ui.RootPanel;
 public class Main implements EntryPoint {
 
 	public void onModuleLoad() {
-		
+
 		RootLayoutPanel.get().getElement().setId("rootLayoutPanel");
 
 		XTabController tabAnimeCtrl = new XTabController(new XNavigationController(new TransitionsController()));
-		tabAnimeCtrl.set("Animations", new Image("images/icons/tab0.png"),
-				new Image("images/icons/tab0-selected.png"));
+		tabAnimeCtrl.set("Animations", new Image("images/icons/tab0.png"), new Image("images/icons/tab0-selected.png"));
 
 		XTabController tabWidgetsCtrl = new XTabController(new XNavigationController(new WidgetsController()));
-		tabWidgetsCtrl.set("Widgets", new Image("images/icons/tab3.png"),
-				new Image("images/icons/tab3-selected.png"));
+		tabWidgetsCtrl.set("Widgets", new Image("images/icons/tab3.png"), new Image("images/icons/tab3-selected.png"));
 
-		XTabController tabThemesCtrl = new XTabController(new DemoWidgetsController("Themes", "images/icons/bgSample1.png"));
-		tabThemesCtrl.set("Themes", new Image("images/icons/tab4.png"), new Image("images/icons/tab4-selected.png"));
+		// XTabController tabThemesCtrl = new XTabController(new
+		// DemoWidgetsController("Themes", "images/icons/bgSample1.png"));
+		// tabThemesCtrl.set("Themes", new Image("images/icons/tab4.png"), new
+		// Image("images/icons/tab4-selected.png"));
 
-//		XTabController tabListCtrl = new XTabController(new XNavigationController(new ListsController()));
-//		tabListCtrl.set("Lists", new Image("images/icons/tab1.png"), new Image("images/icons/tab1-selected.png"));
+		// XTabController tabListCtrl = new XTabController(new
+		// XNavigationController(new ListsController()));
+		// tabListCtrl.set("Lists", new Image("images/icons/tab1.png"), new
+		// Image("images/icons/tab1-selected.png"));
 
 		XTabBarController tabBarController = new XTabBarController();
-		tabBarController.addControllers( tabWidgetsCtrl, tabAnimeCtrl);
-		
+		tabBarController.addControllers(tabWidgetsCtrl, tabAnimeCtrl);
+
 		RootPanel.get("loading").setVisible(false);
-
-
-//		TextArea _textArea = new TextArea();
-//		_textArea.setText("qqqqq\noooo");
-//		RootPanel.get().add(_textArea);
-//
-//		TextBox _textBox = new TextBox();
-//		_textArea.setText("11111");
-//		RootPanel.get().add(_textBox);
 	}
 }
