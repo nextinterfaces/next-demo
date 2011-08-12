@@ -57,7 +57,7 @@ public class DemoUtils {
 
 	public static void openGit(final String url) {
 		final XPopup popup = new XPopup();
-		XButton btn = new XButton("Fork at Git", XButtonType.Shadow);
+		XButton btn = new XButton("Fork on Git", XButtonType.Shadow);
 		btn.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 				Utils.loadUrl(Globals.GIT_HOST + url + ".java");
@@ -65,7 +65,7 @@ public class DemoUtils {
 		});
 		
 		XFlexTable ft = new XFlexTable();
-		ft.addWidgets(new XLabel("<br/>Source is coming soon. Meanwhile browse at Git.<br/><br/>"), btn);
+		ft.addWidgets(new XLabel("<br/>Source is coming soon<br/><br/>"), btn);
 		popup.setWidget(ft);
 		popup.setTop(20.0, Unit.PCT);
 		popup.setRight(20., Unit.PCT);
