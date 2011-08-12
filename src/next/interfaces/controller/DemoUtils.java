@@ -65,7 +65,7 @@ public class DemoUtils {
 		});
 		
 		XFlexTable ft = new XFlexTable();
-		ft.addWidgets(new XLabel("<br/><br/>Source is coming soon. Meanwhile browse at Git.<br/><br/><br/>"), btn);
+		ft.addWidgets(new XLabel("<br/>Source is coming soon. Meanwhile browse at Git.<br/><br/>"), btn);
 		popup.setWidget(ft);
 		popup.setTop(20.0, Unit.PCT);
 		popup.setRight(20., Unit.PCT);
