@@ -4,16 +4,21 @@
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	/* Disable touch/hold text & image selection */
 	-webkit-touch-callout: none;
-	/* -webkit-user-select: none; textArea disable bug*/
 	cursor: default;
 	-webkit-tap-highlight-color: RGBA(0, 0, 0, 0);
 }
 
-html,body {
+html, body {
 	height: 100%;
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
+}
+
+p, div, span, td {
+	/* This disables inputs and textarea */
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 body {
