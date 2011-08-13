@@ -36,7 +36,6 @@ Installation:
 * [Download](http://nextinterfaces.com/download) `next-xx.zip` file 
 * Add the attached `next.jar` (`/hello-next/war/WEB-INF/next.jar`) file to your GWT project & classpath
 * Add `next.css` and `next/images` to your project root. Use `index.html` for reference.
-* And those are all the required libraries to get you started
 * Edit your project .gwt.xml and add
 
 				<?xml version="1.0" encoding="UTF-8"?>
