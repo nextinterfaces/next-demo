@@ -43,7 +43,6 @@ Installation:
 								...
 								<inherits name='next.interfaces' />
 								<entry-point class='com.domain.YourEntryPoint' />
-								-------------------------------------------------
 								...
 				</module>
 
