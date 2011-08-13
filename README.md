@@ -42,7 +42,8 @@ Installation:
 				<module rename-to='your-mobule-name'>
 								...
 								<inherits name='next.interfaces' />
-### 								<entry-point class='com.domain.YourEntryPoint' />
+								<entry-point class='com.domain.YourEntryPoint' />
+								-------------------------------------------------
 								...
 				</module>
 
