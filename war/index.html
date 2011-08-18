@@ -33,6 +33,26 @@
 
 		<img id="loading" src="images/icons/next-logo-white.png" style="width: 155px; height: 75px; position: absolute; top: 50%; left: 50%; margin: -60px 0 0 -75px;" />
 
+		<script>
+			var ua = navigator.userAgent.toLowerCase();
+			if ( ua.indexOf("webkit") != -1
+			      		|| ua.indexOf("playbook") != -1
+			      		|| ua.indexOf("rim") != -1
+			      		|| ua.indexOf("blackberry") != -1
+			      		|| ua.indexOf("nokia") != -1
+			      		|| ua.indexOf("bada") != -1
+			      		|| ua.indexOf("webos") != -1
+			      		|| ua.indexOf("android") != -1
+			      		|| ua.indexOf("iphone") != -1
+			      		|| ua.indexOf("ipad") != -1
+			      		|| ua.indexOf("ipod") != -1
+			      		|| ua.indexOf("meego") != -1) {
+				//TODO inject next gwt script;   nextdemo/nextdemo.nocache.js
+			} else {
+			  window.location = "/demo-non-webkit"
+			}
+		</script>
+		
 		<script type="text/javascript" language="javascript" src="nextdemo/nextdemo.nocache.js"></script>
 		
 	</body>

@@ -664,9 +664,11 @@ div.tableCell {
 
 .xlabel.Text {
 	color: #444;
+	/*
 	margin: 7px 0 7px 0px;
 	padding-left: 13px;
-	font-size: 17px;
+	*/
+	font-size: 1.2em;
 	font-weight: bold;
 }
 
