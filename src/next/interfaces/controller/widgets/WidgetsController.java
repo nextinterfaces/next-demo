@@ -33,7 +33,7 @@ public class WidgetsController extends XTableController {
 
 	public WidgetsController() {
 
-		setTitle("next Widgets");
+		setTitle("NEXT widgets");
 
 		getNavigationBar().setRightTitle("Source");
 		getNavigationBar().getRightButton().addClickHandler(new ClickHandler() {
@@ -67,6 +67,7 @@ public class WidgetsController extends XTableController {
 	public void onRowSelected(int indexSelected, CellData cellDataSelected, XTableCell tableCell) {
 
 		if (indexSelected == 0) {
+//			getNavigationController().pushController(new DragViewController(), true);
 			getNavigationController().pushController(new CustomListController(), true);
 
 		} else if (indexSelected == 1) {
