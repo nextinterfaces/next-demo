@@ -8,15 +8,14 @@
 	-webkit-tap-highlight-color: RGBA(0, 0, 0, 0);
 }
 
-html, body {
+html,body {
 	height: 100%;
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
 }
 
-p, div, span, td {
-	/* This disables inputs and textarea */
+p,div,span,td { /* This disables inputs and textarea */
 	-webkit-user-select: none;
 	user-select: none;
 }
@@ -289,51 +288,73 @@ div.tableCell {
  * XButton Navigation
  *****************************/
 .xbutton.Navigation {
-	padding: 0 5px;
-}
-
-.xbutton.Navigation .right {
-	width: 5px;
-	height: 30px;
-}
-
-.xbutton.Navigation .right div {
-	width: inherit;
-	height: inherit;
-	margin-left: -1px; /*during animation there is 1px padding*/
-	background: url(images/navigationButtonRight.png) no-repeat;
-}
-
-.xbutton.Navigation.selected .right div {
-	background: url(images/navigationButtonRightSelected.png) no-repeat;
+	border: 1px solid RGBA(48, 54, 62, .7);
+	border-top: 1px solid RGBA(48, 54, 62, .9);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7E8FA7), color-stop(0.05, #8EA4C1), color-stop(0.5, #5877A2), color-stop(0.5, #476999), color-stop(1, #4A6C9B) );
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+	-webkit-box-shadow: 0px 0.1em 0px rgba(255, 255, 255, 0.3);
 }
 
 .xbutton.Navigation .body {
 	vertical-align: middle;
-	background: url(images/navigationButton.png) no-repeat;
 	height: 30px;
-	padding: 0 6px 0 10px;
+	padding: 0 5px 0 10px;
 	white-space: nowrap;
-	font-weight: bold;
-	font-size: 0.8em;
+	font-size: 0.7em;
 	color: #fff;
 	text-shadow: 0 -1px 1px #465871;
 }
 
-.xbutton.Navigation.highlighted .body {
-	background: url(images/navigationButtonHighlighted.png) no-repeat;
+.xbutton.Navigation.selected {
+	border: 1px solid RGBA(43, 46, 54, .7);
+	border-top: 1px solid RGBA(43, 46, 54, .9);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6F798F), color-stop(0.05, #7D88A5), color-stop(0.5, #3A4E78), color-stop(0.5, #253C6A), color-stop(1, #273F6D) );
+	-webkit-box-shadow: 0px 0.1em 0px rgba(255, 255, 255, 0.3);
 }
 
-.xbutton.Navigation.highlighted .right div {
-	background: url(images/navigationButtonHighlightedRight.png) no-repeat;
+.xbutton.Navigation.Red {
+	border: 1px solid RGBA(67, 42, 44, .7);
+	border-top: 1px solid RGBA(67, 42, 44, .9);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#B46B71), color-stop(0.05, #D1787F), color-stop(0.5, #B82E3A), color-stop(0.5, #B01825), color-stop(1, #B01825) );
 }
 
-.xbutton.Navigation.highlighted.selected .right div {
-	background: url(images/navigationButtonRightSelected.png) no-repeat;
+.xbutton.Navigation.Red .body {
+	text-shadow: 0 -1px 1px #6F252B;
 }
 
-.xbutton.Navigation.selected .body {
-	background: url(images/navigationButtonSelected.png) no-repeat;
+.xbutton.Navigation.Red.selected {
+	border: 1px solid RGBA(56, 44, 45, .7);
+	border-top: 1px solid RGBA(56, 44, 45, .9);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#957174), color-stop(0.05, #AB7F83), color-stop(0.5, #7D3A3F), color-stop(0.5, #6F252B), color-stop(1, #6F252B) );
+}
+
+.xbutton.Navigation.Blue {
+	border: 1px solid RGBA(42, 53, 75, .7);
+	border-top: 1px solid RGBA(42, 53, 75, .9);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6E8AC8), color-stop(0.05, #7B9EEA), color-stop(0.5, #376FE0), color-stop(0.5, #2260DD), color-stop(1, #2463DE) );
+}
+
+.xbutton.Navigation.Blue.selected {
+	border: 1px solid RGBA(43, 46, 54, .7);
+	border-top: 1px solid RGBA(43, 46, 54, .9);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6F798F), color-stop(0.05, #7D88A5), color-stop(0.5, #3A4E78), color-stop(0.5, #253C6A), color-stop(1, #273F6D) );
+}
+
+.xbutton.Navigation.Black {
+	border: 1px solid RGBA(36, 36, 36, .7);
+	border-top: 1px solid RGBA(36, 36, 36, .9);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#747474), color-stop(0.05, #838383), color-stop(0.5, #444), color-stop(0.5, #303030), color-stop(1, #333) );
+}
+
+.xbutton.Navigation.Black .body {
+	text-shadow: 0 -1px 1px #282828;
+}
+
+.xbutton.Navigation.Black.selected {
+	border: 1px solid RGBA(29, 29, 29, .7);
+	border-top: 1px solid RGBA(29, 29, 29, .9);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5d5d5d), color-stop(0.05, #696969), color-stop(0.5, #363636), color-stop(0.5, #262626), color-stop(1, #292929) );
 }
 
 /*****************************
@@ -437,135 +458,32 @@ div.tableCell {
 }
 
 /*****************************
- * XButton Disclosure 
+ * xbutton Image
  *****************************/
-.xbutton.Disclosure {
-	background-image: url(images/xbuttonDisclosure.png);
+.xbutton.Image {
+	background-image: url(images/xbuttonImage.png);
 	background-repeat: no-repeat;
 }
 
-.xbutton.Disclosure .right {
+.xbutton.Image .right {
 	width: 5px;
 	height: 30px;
 }
 
-.xbutton.Disclosure .right div {
+.xbutton.Image .right div {
 	width: inherit;
 	height: inherit;
 }
 
-.xbutton.Disclosure.selected {
-	background-image: url(images/xbuttonDisclosureSelected.png);
+.xbutton.Image.selected {
+	background-image: url(images/xbuttonImageSelected.png);
 }
 
-.xbutton.Disclosure.selected .body {
-	color: #0D41CC;
-}
-
-.xbutton.Disclosure .body {
-	vertical-align: middle;
-	padding: 0 5px;
-	white-space: nowrap;
-	font-size: 1.1em;
-	font-weight: bold;
-	color: #111;
-}
-
-/*****************************
- * xbutton InfoLight
- *****************************/
-.xbutton.InfoLight {
-	background-image: url(images/xbuttonInfoLight.png);
-	background-repeat: no-repeat;
-}
-
-.xbutton.InfoLight .right {
-	width: 5px;
-	height: 30px;
-}
-
-.xbutton.InfoLight .right div {
-	width: inherit;
-	height: inherit;
-}
-
-.xbutton.InfoLight.selected {
-	background-image: url(images/xbuttonInfoLightSelected.png);
-}
-
-.xbutton.InfoLight.selected .body {
+.xbutton.Image.selected .body {
 	color: #154282;
 }
 
-.xbutton.InfoLight .body {
-	vertical-align: middle;
-	padding: 0 5px;
-	white-space: nowrap;
-	font-size: 1.1em;
-	font-weight: bold;
-	color: #111;
-}
-
-/*XButton InfoDark */
-.xbutton.InfoDark {
-	background-image: url(images/xbuttonInfoDark.png);
-	background-repeat: no-repeat;
-}
-
-.xbutton.InfoDark .right {
-	width: 5px;
-	height: 30px;
-}
-
-.xbutton.InfoDark .right div {
-	width: inherit;
-	height: inherit;
-}
-
-.xbutton.InfoDark.selected {
-	background-image: url(images/xbuttonInfoDarkSelected.png);
-}
-
-.xbutton.InfoDark.selected .body {
-	color: #154282;
-}
-
-.xbutton.InfoDark .body {
-	vertical-align: middle;
-	padding: 0 5px;
-	white-space: nowrap;
-	font-size: 1.1em;
-	font-weight: bold;
-	color: #111;
-}
-
-/*****************************
- * xbutton add
- *****************************/
-.xbutton.Add {
-	background-image: url(images/xbuttonAdd.png);
-	background-repeat: no-repeat;
-}
-
-.xbutton.Add .right {
-	width: 5px;
-	height: 30px;
-}
-
-.xbutton.Add .right div {
-	width: inherit;
-	height: inherit;
-}
-
-.xbutton.Add.selected {
-	background-image: url(images/xbuttonAddSelected.png);
-}
-
-.xbutton.Add.selected .body {
-	color: #154282;
-}
-
-.xbutton.Add .body {
+.xbutton.Image .body {
 	vertical-align: middle;
 	padding: 0 5px;
 	white-space: nowrap;
@@ -1073,7 +991,7 @@ input::-webkit-outer-spin-button {
 	right: 0;
 	bottom: 0;
 	z-index: 90;
-	background: RGBA(0,0,0,.4);
+	background: RGBA(0, 0, 0, .4);
 }
 
 .xpopup {
