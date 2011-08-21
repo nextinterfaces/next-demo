@@ -22,9 +22,6 @@ import next.i.view.widgets.XButton;
 import next.i.view.widgets.XButton.XButtonType;
 import next.interfaces.controller.GitXController;
 
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 
@@ -47,7 +44,7 @@ public class ButtonsController extends GitXController {
 		CellData d5 = new CellData(null, "Black", new XButton("Black", XButtonType.NavigationBlack));
 		CellData d6 = new CellData(null, "Image", new XButton("Left", XButtonType.Image));
 		CellData d7 = new CellData(null, "Image", new XButton("Right", XButtonType.Image, false));
-
+		
 		XTableView tableView = new XTableView();
 		tableView.addItem(new XTableCell(d0), new XTableCell(d1), new XTableCell(d2), new XTableCell(d3),
 				new XTableCell(d4), new XTableCell(d5), new XTableCell(d6), new XTableCell(d7));
@@ -59,17 +56,17 @@ public class ButtonsController extends GitXController {
 
 	private void addClickHandlers(CellData... data) {
 		for (CellData c : data) {
-			final XButton b = (XButton) c.getEastWidgets()[0];
-			b.addClickHandler(new ClickHandler() {
-				public void onClick(ClickEvent event) {
-					Window.alert("You tapped " + b.getTitle() + ".");
-					// XPopup popup = new XPopup();
-					// popup.setWidget(new XLabel("You tapped " + b.getTitle() + "."));
-					// popup.setTop(30.0, Unit.PCT); popup.setRight(30.,Unit.PCT);
-					// popup.setBottom(30., Unit.PCT); popup.setLeft(30., Unit.PCT);
-					// popup.show();
-				}
-			});
+//			XButton b = (XButton) c.getEastWidgets()[0];
+//			b.addClickHandler(new ClickHandler() {
+//				public void onClick(ClickEvent e) {
+//					Window.alert("You tapped " + ((XButton)e.getSource()).getTitle() + ".");
+//					// XPopup popup = new XPopup();
+//					// popup.setWidget(new XLabel("You tapped " + b.getTitle() + "."));
+//					// popup.setTop(30.0, Unit.PCT); popup.setRight(30.,Unit.PCT);
+//					// popup.setBottom(30., Unit.PCT); popup.setLeft(30., Unit.PCT);
+//					// popup.show();
+//				}
+//			});
 		}
 	}
 

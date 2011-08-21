@@ -45,22 +45,30 @@ public class WidgetsController extends XTableController {
 		((XTableView) getView()).showChevron(true);
 
 		TableData tableDS = new TableData();
+		
+		
 		tableDS.add(
-				new CellData(new Image("images/icons/i-list.png"), "Lists", null),
-				new CellData(new Image("images/icons/i-slider.png"), "Slider", null),
-				new CellData(new Image("images/icons/i-radio.png"), "Radio Button", null),
-				new CellData(new Image("images/icons/i-button.png"), "Buttons", null),
-				new CellData(new Image("images/icons/i-picker.png"), "Picker", null),
-				new CellData(new Image("images/icons/i-switch.png"), "Switch", null),
-				new CellData(new Image("images/icons/i-form.png"), "Form", null),
-				new CellData(new Image("images/icons/i-progress.png"), "Progress", null),
-				new CellData(new Image("images/icons/i-checkbox.png"), "CheckBox", null),
-				new CellData(new Image("images/icons/i-image.png"), "Label and Image", null),
-				new CellData(new Image("images/icons/i-navigation.png"), "Navigation", null)
+				new CellData(createImage("images/icons/i-list.png"), "Lists", null),
+				new CellData(createImage("images/icons/i-slider.png"), "Slider", null),
+				new CellData(createImage("images/icons/i-radio.png"), "Radio Button", null),
+				new CellData(createImage("images/icons/i-button.png"), "Buttons", null),
+				new CellData(createImage("images/icons/i-picker.png"), "Picker", null),
+				new CellData(createImage("images/icons/i-switch.png"), "Switch", null),
+				new CellData(createImage("images/icons/i-form.png"), "Form", null),
+				new CellData(createImage("images/icons/i-progress.png"), "Progress", null),
+				new CellData(createImage("images/icons/i-checkbox.png"), "CheckBox", null),
+				new CellData(createImage("images/icons/i-image.png"), "Label and Image", null),
+				new CellData(createImage("images/icons/i-navigation.png"), "Navigation", null)
 				);
 //				, "Slide"
 
 		initDataSource(tableDS);
+	}
+	
+	private Image createImage(String url){
+		Image img = new Image(url);
+		img.setSize("30px", "30px");
+		return img;
 	}
 
 	@Override
