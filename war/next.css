@@ -31,7 +31,7 @@ body {
 }
 
 .navigationContent {
-	background: #C5CCD4 url(images/navigationContent.png);
+	background: #C5CCD4 url(images/all/navigationContent.png);
 }
 
 .navigationBar {
@@ -57,16 +57,19 @@ body {
 	width: inherit;
 	height: inherit;
 	margin-left: -1px; /*during animation there is 1px padding*/
-	background: url(images/navigationButtonRight.png) no-repeat;
+	background: url(images/ios.png) no-repeat;
+	background-position: 0 -446px;
 }
 
 .navBarItem.selected .right div {
-	background: url(images/navigationButtonRightSelected.png) no-repeat;
+	background: url(images/ios.png) no-repeat;
+	background-position: 0 -486px;
 }
 
 .navBarItem .body {
 	vertical-align: middle;
-	background: url(images/navigationButton.png) no-repeat;
+	background: url(images/ios.png) no-repeat;
+	background-position: 0 -246px;
 	height: 30px;
 	padding: 0 6px 0 10px;
 	white-space: nowrap;
@@ -77,28 +80,34 @@ body {
 }
 
 .navBarItem.highlighted .body {
-	background: url(images/navigationButtonHighlighted.png) no-repeat;
+	background: url(images/ios.png) no-repeat;
+	background-position: 0 -366px;
 }
 
 .navBarItem.highlighted .right div {
-	background: url(images/navigationButtonHighlightedRight.png) no-repeat;
+	background: url(images/ios.png) no-repeat;
+	background-position: 0 -406px;
 }
 
 .navBarItem.highlighted.selected .right div {
-	background: url(images/navigationButtonRightSelected.png) no-repeat;
+	background: url(images/ios.png) no-repeat;
+	background-position: 0 -486px;
 }
 
 .navBarItem.navBarItemBack .body {
-	background: url(images/navigationButtonBack.png) no-repeat;
+	background: url(images/ios.png) no-repeat;
+	background-position: 0 -286px;
 	padding: 0 6px 0 15px;
 }
 
 .navBarItem.navBarItemBack.selected .body {
-	background: url(images/navigationButtonBackSelected.png) no-repeat;
+	background: url(images/ios.png) no-repeat;
+	background-position: 0 -326px;
 }
 
 .navBarItem.selected .body {
-	background: url(images/navigationButtonSelected.png) no-repeat;
+	background: url(images/ios.png) no-repeat;
+	background-position: 0 -526px;
 }
 
 .navBarTitle {
@@ -233,14 +242,14 @@ div.tableCell {
 }
 
 .tableCell.chevron {
-	background-image: url("images/chevron.png");
+	background-image: url("images/all/chevron.png");
 	background-repeat: no-repeat;
 	background-position: right;
 }
 
 .tableCell.selected.chevron {
-	background-image: url("images/chevronSelected.png");
-	background-image: url("images/chevronSelected.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0, #058CF5), color-stop(1, #015EE6) );
+	background-image: url("images/all/chevronSelected.png");
+	background-image: url("images/all/chevronSelected.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0, #058CF5), color-stop(1, #015EE6) );
 }
 
 .tableCellWestImage {
@@ -461,7 +470,7 @@ div.tableCell {
  * xbutton Image
  *****************************/
 .xbutton.Image {
-	/*background-image: url(images/xbuttonImage.png);*/
+	/*background-image: url(images/icons/xbuttonImage.png);*/
 	background-repeat: no-repeat;
 }
 
@@ -476,7 +485,7 @@ div.tableCell {
 }
 
 .xbutton.Image.selected {
-	/*background-image: url(images/xbuttonImageSelected.png);*/
+	/*background-image: url(images/icons/xbuttonImageSelected.png);*/
 }
 
 .xbutton.Image.selected .body {
@@ -496,7 +505,7 @@ div.tableCell {
  * xswitch
  *****************************/
 .xswitch {
-	background-image: url(images/xswitch.png);
+	background-image: url(images/all/xswitch.png);
 	background-position: 0 0;
 	background-repeat: no-repeat;
 	width: 94px;
@@ -562,8 +571,8 @@ div.tableCell {
 	margin: -8px 0 0 -18px;
 	width: 36px;
 	height: 36px;
-	background-image: url(images/xsliderThumb.png);
-	background-position: 0 0;
+	background-image: url(images/ios.png);
+	background-position: 0 -898px;
 	background-repeat: no-repeat;
 	float: left;
 }
@@ -808,7 +817,8 @@ input::-webkit-outer-spin-button {
 
 .xbtn .icon {
 	background: #A5B3C6;
-	background-image: url(images/xpicker.png);
+	background-image: url(images/ios.png);
+	background-position: 0 -798px;
 	background-repeat: no-repeat;
 	-moz-border-radius: 9px;
 	-webkit-border-radius: 9px;
@@ -924,14 +934,14 @@ input::-webkit-outer-spin-button {
 }
 
 .xcheckboxGroup.vertical>span {
-	background-image: url(images/xcheckbox.png);
+	background-image: url(images/all/xcheckbox.png);
 	background-position: center right;
 	background-repeat: no-repeat;
 	padding-right: 10px;
 }
 
 .xradioButtonGroup.vertical>span {
-	background-image: url(images/xradiobutton.png);
+	background-image: url(images/all/xradiobutton.png);
 	background-position: center right;
 	background-repeat: no-repeat;
 	padding-right: 10px;
@@ -939,7 +949,7 @@ input::-webkit-outer-spin-button {
 
 .xcheckboxGroup.vertical>span.selected {
 	background-color: #f0f0f0;
-	background-image: url(images/xcheckbox-selected.png);
+	background-image: url(images/all/xcheckbox-selected.png);
 	background-position: center right;
 	background-repeat: no-repeat;
 	padding-right: 10px;
@@ -947,7 +957,7 @@ input::-webkit-outer-spin-button {
 
 .xradioButtonGroup.vertical>span.selected {
 	background-color: #f0f0f0;
-	background-image: url(images/xradiobutton-selected.png);
+	background-image: url(images/all/xradiobutton-selected.png);
 	background-position: center right;
 	background-repeat: no-repeat;
 	padding-right: 10px;
