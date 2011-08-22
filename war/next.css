@@ -461,7 +461,7 @@ div.tableCell {
  * xbutton Image
  *****************************/
 .xbutton.Image {
-	background-image: url(images/xbuttonImage.png);
+	/*background-image: url(images/xbuttonImage.png);*/
 	background-repeat: no-repeat;
 }
 
@@ -476,7 +476,7 @@ div.tableCell {
 }
 
 .xbutton.Image.selected {
-	background-image: url(images/xbuttonImageSelected.png);
+	/*background-image: url(images/xbuttonImageSelected.png);*/
 }
 
 .xbutton.Image.selected .body {
