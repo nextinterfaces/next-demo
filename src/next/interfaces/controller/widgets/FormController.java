@@ -33,7 +33,7 @@ public class FormController extends GitXController {
 	public IsWidget getViewContent() {
 
 		XFlexTable panel = new XFlexTable(null, "#fff");
-		panel.setCellSpacing(0);
+		panel.setCellSpacing(0); 
 
 		XTextField text = new XTextField("Text", null);
 		XTextField password = new XTextField("Password", XTextFieldType.PASSWORD);
