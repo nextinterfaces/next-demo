@@ -15,18 +15,18 @@
  */
 package next.interfaces.controller;
 
-import next.i.util.Utils;
 import next.i.view.CellData;
 import next.i.view.widgets.XButton;
 import next.i.view.widgets.XButton.XButtonType;
 import next.i.view.widgets.XFlexTable;
-import next.i.view.widgets.XLabel;
 import next.i.view.widgets.XPopup;
 import next.interfaces.Globals;
 
 import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.HTML;
 
 public class DemoUtils {
 
@@ -56,16 +56,18 @@ public class DemoUtils {
 	}-*/;
 
 	public static void openGit(final String url) {
-		final XPopup popup = new XPopup();
-		XButton btn = new XButton("Fork on Git", XButtonType.Shadow);
+
+		XButton btn = new XButton("View in GitHub", XButtonType.Shadow);
 		btn.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
-				Utils.loadUrl(Globals.GIT_HOST + url + ".java");
+				Window.open(Globals.GIT_HOST + url + ".java", "_tab", "");
+				// Utils.loadUrl(Globals.GIT_HOST + url + ".java");
 			}
 		});
-		
+
+		final XPopup popup = new XPopup();
 		XFlexTable ft = new XFlexTable();
-		ft.addWidgets(new XLabel("<br/>Source is coming soon<br/><br/>"), btn);
+		ft.addWidgets(new HTML("<br/><br/>"), btn);
 		popup.setWidget(ft);
 		popup.setTop(20.0, Unit.PCT);
 		popup.setRight(20., Unit.PCT);
