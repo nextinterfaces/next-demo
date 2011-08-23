@@ -42,16 +42,6 @@ public class Main implements EntryPoint {
 		XTabController tabWidgetsCtrl = new XTabController(new XNavigationController(new WidgetsController()));
 		tabWidgetsCtrl.set("Widgets", new Image("images/icons/tab3.png"), new Image("images/icons/tab3-selected.png"));
 
-		// XTabController tabThemesCtrl = new XTabController(new
-		// DemoWidgetsController("Themes", "images/icons/bgSample1.png"));
-		// tabThemesCtrl.set("Themes", new Image("images/icons/tab4.png"), new
-		// Image("images/icons/tab4-selected.png"));
-
-		// XTabController tabListCtrl = new XTabController(new
-		// XNavigationController(new ListsController()));
-		// tabListCtrl.set("Lists", new Image("images/icons/tab1.png"), new
-		// Image("images/icons/tab1-selected.png"));
-
 		XTabBarController tabBarController = new XTabBarController();
 		tabBarController.addControllers(tabWidgetsCtrl, tabAnimeCtrl);
 
