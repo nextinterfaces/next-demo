@@ -38,7 +38,7 @@ public class NavigationBarController extends GitXController {
 		VerticalPanel panel = new VerticalPanel();
 		panel.setWidth("100%");
 		panel.getElement().getStyle().setProperty("background", "#f8f8f8");
-		panel.getElement().getStyle().setProperty("padding", "40px 20px");
+		panel.getElement().getStyle().setProperty("padding", "40px 20px"); 
 
 		XNavigationBar bar1 = new XNavigationBar();
 		bar1.setTitle("Bar One");
