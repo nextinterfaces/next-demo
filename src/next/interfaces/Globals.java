@@ -17,6 +17,6 @@ package next.interfaces;
 
 public interface Globals {
 
-	String GIT_HOST = "https://github.com/nextinterfaces/next-Demo/tree/master/src/next/interfaces";
+	String GIT_HOST = "https://github.com/nextinterfaces/next-demo/tree/master/src/next/interfaces";
 
 }
