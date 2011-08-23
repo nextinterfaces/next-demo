@@ -25,7 +25,6 @@ import next.interfaces.Globals;
 import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.HTML;
 
 public class DemoUtils {
@@ -60,8 +59,10 @@ public class DemoUtils {
 		XButton btn = new XButton("View in GitHub", XButtonType.Shadow);
 		btn.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
-				Window.open(Globals.GIT_HOST + url + ".java", "_tab", "");
+				// Window.open(Globals.GIT_HOST + url + ".java", "_tab", "");
 				// Utils.loadUrl(Globals.GIT_HOST + url + ".java");
+				// This click handler seems to work best
+				openURL(Globals.GIT_HOST + url + ".java");
 			}
 		});
 
