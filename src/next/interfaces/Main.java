@@ -17,7 +17,6 @@ package next.interfaces;
 
 /**
  * Main entry point class
- * @author Atanas Roussev
  */
 import next.i.controller.XNavigationController;
 import next.i.controller.XTabBarController;
@@ -27,14 +26,11 @@ import next.interfaces.controller.widgets.WidgetsController;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.ui.Image;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.RootPanel;
 
 public class Main implements EntryPoint {
 
 	public void onModuleLoad() {
-
-		RootLayoutPanel.get().getElement().setId("rootLayoutPanel");
 
 		XTabController tabAnimeCtrl = new XTabController(new XNavigationController(new TransitionsController()));
 		tabAnimeCtrl.set("Animations", new Image("images/icons/tab0.png"), new Image("images/icons/tab0-selected.png"));
