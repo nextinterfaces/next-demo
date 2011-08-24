@@ -22,15 +22,13 @@ import next.interfaces.controller.DemoUtils;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.ui.FlexTable.FlexCellFormatter;
-import com.google.gwt.user.client.ui.HasVerticalAlignment;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.IsWidget;
 
-public class HorizontalController extends XController {
+public class VerticalController extends XController {
 
-	public HorizontalController() {
-		setTitle("Horizontal Scroll");
+	public VerticalController() {
+		setTitle("Vertical Scroll");
 
 		getNavigationBar().setLeftTitle("Back", Type.BACK_BUTTON);
 		getNavigationBar().getLeftButton().addClickHandler(new ClickHandler() {
@@ -49,21 +47,19 @@ public class HorizontalController extends XController {
 
 	@Override
 	public Scroll getScrollOrientation() {
-		return XController.Scroll.HORIZONTAL;
+		return XController.Scroll.VERTICAL;
 	}
 
 	@Override
 	public IsWidget getViewContent() {
-		XFlexTable panel = new XFlexTable("100%", null);
-		panel.addWidgets(new Image("images/icons/wideimg.jpg"), null);
-		panel.setWidth("1000px");
-		FlexCellFormatter fcf = panel.getFlexCellFormatter();
-		fcf.setVerticalAlignment(0, 0, HasVerticalAlignment.ALIGN_MIDDLE);
+		XFlexTable panel = new XFlexTable("1080px", null);
+		panel.addWidgets(new Image("images/icons/tallimg.jpg"), null);
+//		panel.setHeight("1080px");
 		return panel;
 	}
 
 	public String getGitPath() {
-		return "/controller/animation/HorizontalController";
+		return "/controller/animation/VerticalController";
 	}
 
 }

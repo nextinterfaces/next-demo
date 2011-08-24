@@ -34,7 +34,8 @@ public class AnimationsController extends GitXTableController {
 
 		TableData tableDS = new TableData();
 
-		tableDS.add("Slide", "Slide up", "Slide down", "Fade", "Pop", "Swap", "Flip", "Horizontal Scroll");
+		tableDS.add("Slide", "Slide up", "Slide down", "Fade", "Pop", "Swap", "Flip", "Horizontal Scroll",
+				"Vertical Scroll");
 
 		initDataSource(tableDS);
 	}
@@ -76,6 +77,10 @@ public class AnimationsController extends GitXTableController {
 
 		} else if (indexSelected == 7) {
 			HorizontalController ctrl = new HorizontalController();
+			getNavigationController().pushController(ctrl, true);
+
+		} else if (indexSelected == 8) {
+			VerticalController ctrl = new VerticalController();
 			getNavigationController().pushController(ctrl, true);
 		}
 
