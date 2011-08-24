@@ -41,6 +41,11 @@ public abstract class GitXController extends XController {
 		});
 	}
 
+	@Override
+	public Scroll getScrollOrientation() {
+		return XController.Scroll.VERTICAL;
+	}
+
 	public abstract IsWidget getViewContent();
 
 	public abstract String getGitPath();

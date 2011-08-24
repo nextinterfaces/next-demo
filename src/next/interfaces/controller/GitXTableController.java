@@ -15,6 +15,7 @@
  */
 package next.interfaces.controller;
 
+import next.i.controller.XController;
 import next.i.controller.XTableController;
 
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -30,6 +31,11 @@ public abstract class GitXTableController extends XTableController {
 				DemoUtils.openGit(getGitPath());
 			}
 		});
+	}
+
+	@Override
+	public Scroll getScrollOrientation() {
+		return XController.Scroll.VERTICAL;
 	}
 
 	public abstract String getGitPath();

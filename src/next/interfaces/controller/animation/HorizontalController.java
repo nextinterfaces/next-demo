@@ -15,7 +15,7 @@
  */
 package next.interfaces.controller.animation;
 
-import next.i.controller.XHorizontalScrollController;
+import next.i.controller.XController;
 import next.i.view.XBarItem.Type;
 import next.interfaces.controller.DemoUtils;
 
@@ -25,7 +25,7 @@ import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.IsWidget;
 
-public class HorizontalController extends XHorizontalScrollController {
+public class HorizontalController extends XController {
 
 	public HorizontalController() {
 		setTitle("Horizontal Scroll");
@@ -43,6 +43,11 @@ public class HorizontalController extends XHorizontalScrollController {
 				DemoUtils.openGit(getGitPath());
 			}
 		});
+	}
+
+	@Override
+	public Scroll getScrollOrientation() {
+		return XController.Scroll.HORIZONTAL;
 	}
 
 	@Override

@@ -23,7 +23,6 @@ import next.i.view.XTableView;
 import next.interfaces.controller.DemoUtils;
 import next.interfaces.views.CustomListController;
 import next.interfaces.views.NavigationBarController;
-import next.interfaces.views.SlideController;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -112,7 +111,7 @@ public class WidgetsController extends XTableController {
 			getNavigationController().pushController(new PopupController(), true);
 			
 		} else if (indexSelected == 100) {
-			getNavigationController().pushController(new SlideController(), true);
+//			getNavigationController().pushController(new SlideController(), true);
 			
 		}
 
