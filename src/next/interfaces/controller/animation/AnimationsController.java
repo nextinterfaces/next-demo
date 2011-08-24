@@ -22,20 +22,19 @@ import next.i.view.XTableCell;
 import next.i.view.XTableView;
 import next.interfaces.controller.GitXTableController;
 
-
-public class TransitionsController extends GitXTableController {
+public class AnimationsController extends GitXTableController {
 
 	private SlideController slideCtrl;
 
-	public TransitionsController() {
+	public AnimationsController() {
 
 		setTitle("Animations");
 
 		((XTableView) getView()).showChevron(true);
 
 		TableData tableDS = new TableData();
-		
-		tableDS.add("Slide", "Slide up", "Slide down", "Fade", "Pop", "Swap", "Flip");
+
+		tableDS.add("Slide", "Slide up", "Slide down", "Fade", "Pop", "Swap", "Flip", "Horizontal Scroll");
 
 		initDataSource(tableDS);
 	}
@@ -70,15 +69,20 @@ public class TransitionsController extends GitXTableController {
 			this.swapTo(ctrl, null);
 
 		} else if (indexSelected == 6) {
-			if(!Utils.isAndroid()){  // disable android as it rotates wrong
+			if (!Utils.isAndroid()) { // disable android as it rotates wrong
 				FlipController ctrl = new FlipController(getNavigationController().getVisibleController());
 				this.flipTo(ctrl, null);
 			}
+
+		} else if (indexSelected == 7) {
+			HorizontalController ctrl = new HorizontalController();
+			getNavigationController().pushController(ctrl, true);
 		}
+
 	}
 
 	public String getGitPath() {
-		return "/controller/animation/TransitionsController";
+		return "/controller/animation/AnimationsController";
 	}
 
 }
