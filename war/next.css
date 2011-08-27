@@ -998,20 +998,26 @@ input::-webkit-outer-spin-button {
 /*****************************
  * xpopup
  *****************************/
-.xpopup-bg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 90;
+.xpopupOverlay {
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	/* -webkit-transition: 0.25s opacity; */
 	background: RGBA(0, 0, 0, .4);
+	background-image: -webkit-radial-gradient(rgba(127, 127, 127, 0.5), rgba(127, 127, 127, 0.5) 35%, rgba(0, 0, 0, 0.7));
+	bottom: 0;
+	display: -webkit-box;
+	left: 0;
+	padding: 20px;
+	padding-bottom: 130px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 10;
 }
 
 .xpopup {
 	position: absolute;
-	border: 4px solid #2D3642;
-	padding: 6px;
+	border: .3em solid #2D3642;
 	-webkit-border-radius: 0.3em;
 	border-radius: 0.3em;
 	background-color: #fff;

@@ -16,16 +16,14 @@
 package next.interfaces.controller;
 
 import next.i.view.CellData;
+import next.i.view.XDragScrollView;
 import next.i.view.widgets.XButton;
 import next.i.view.widgets.XButton.XButtonType;
-import next.i.view.widgets.XFlexTable;
 import next.i.view.widgets.XPopup;
 import next.interfaces.Globals;
 
-import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.ui.HTML;
 
 public class DemoUtils {
 
@@ -67,13 +65,16 @@ public class DemoUtils {
 		});
 
 		final XPopup popup = new XPopup();
-		XFlexTable ft = new XFlexTable();
-		ft.addWidgets(new HTML("<br/><br/>"), btn);
-		popup.setWidget(ft);
-		popup.setTop(20.0, Unit.PCT);
-		popup.setRight(20., Unit.PCT);
-		popup.setBottom(20., Unit.PCT);
-		popup.setLeft(20., Unit.PCT);
+		XDragScrollView view = new XDragScrollView();
+		
+		view.add(btn);
+		
+		popup.setWidget(view);
+		popup.setTop("20%");
+		popup.setRight("20%");
+		popup.setLeft("20%");
+		popup.setBottom("20%");
+		
 		popup.show();
 	};
 

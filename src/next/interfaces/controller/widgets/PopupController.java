@@ -20,9 +20,6 @@ import next.i.view.CellData;
 import next.i.view.TableData;
 import next.i.view.XTableCell;
 import next.i.view.XTableView;
-import next.i.view.widgets.XButton;
-import next.i.view.widgets.XButton.XButtonType;
-import next.i.view.widgets.XPopup;
 import next.interfaces.controller.DemoUtils;
 
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -59,16 +56,7 @@ public class PopupController extends XTableController {
 	public void onRowSelected(int indexSelected, CellData cellDataSelected, XTableCell tableCell) {
 
 		if (indexSelected == 0) {
-			final XPopup popup = new XPopup();
-			XButton btn = new XButton("Close", XButtonType.Shadow);
-			btn.addClickHandler(new ClickHandler() {
-				public void onClick(ClickEvent event) {
-					popup.hide();
-				}
-			});
-			popup.add(btn);
-			popup.show();
-			
+
 		} else if (indexSelected == 1) {
 
 		} else if (indexSelected == 2) {
