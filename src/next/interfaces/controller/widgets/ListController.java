@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package next.interfaces.views;
+package next.interfaces.controller.widgets;
 
 import next.i.view.CellData;
 import next.i.view.XTableCell;
@@ -26,38 +26,38 @@ import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.Label;
 
-public class CustomListController extends GitXController {
+public class ListController extends GitXController {
 
-	public CustomListController() {
+	public ListController() {
 		setTitle("Lists");
 	}
 
 	@Override
 	public IsWidget getViewContent() {
 
-		CellData d0 = new CellData();
-		d0.setWestWidgets(new Image("images/icons/list0.png"));
-		d0.setTextWidgets(new Label("Ariplane Mode"));
-		d0.setEastWidgets(new XSwitch(true));
-		XTableCell c0 = new XTableCell(d0);
+		CellData data = new CellData();
+		data.setWestWidgets(new Image("images/icons/list0.png"));
+		data.setTextWidgets(new Label("Ariplane Mode"));
+		data.setEastWidgets(new XSwitch(true));
+		XTableCell c0 = new XTableCell(data);
 
-		CellData d1 = new CellData();
-		d1.setWestWidgets(new Image("images/icons/list1.png"));
-		d1.setTextWidgets(new Label("WI-FI"));
-		d1.setEastWidgets(new Image("images/icons/list1x.png"));
-		XTableCell c1 = new XTableCell(d1);
+		data = new CellData();
+		data.setWestWidgets(new Image("images/icons/list1.png"));
+		data.setTextWidgets(new Label("WI-FI"));
+		data.setEastWidgets(new Image("images/icons/list1x.png"));
+		XTableCell c1 = new XTableCell(data);
 
-		CellData d2 = new CellData();
-		d2.setWestWidgets(new Image("images/icons/list2.png"));
-		d2.setTextWidgets(new Label("Notifications"));
-		d2.setEastWidgets(new Image("images/icons/list2x.png"));
-		XTableCell c2 = new XTableCell(d2);
+		data = new CellData();
+		data.setWestWidgets(new Image("images/icons/list2.png"));
+		data.setTextWidgets(new Label("Notifications"));
+		data.setEastWidgets(new Image("images/icons/list2x.png"));
+		XTableCell c2 = new XTableCell(data);
 
-		CellData d3 = new CellData();
-		d3.setWestWidgets(new Image("images/icons/list3.png"));
-		d3.setTextWidgets(new Label("Sound"));
-		d3.setEastWidgets(new XSlider(60));
-		XTableCell c3 = new XTableCell(d3);
+		data = new CellData();
+		data.setWestWidgets(new Image("images/icons/list3.png"));
+		data.setTextWidgets(new Label("Sound"));
+		data.setEastWidgets(new XSlider(60));
+		XTableCell c3 = new XTableCell(data);
 
 		XTableView tableView = new XTableView();
 		tableView.addItem(c0, c1, c2, c3);
@@ -66,7 +66,7 @@ public class CustomListController extends GitXController {
 	}
 
 	public String getGitPath() {
-		return "/views/CustomListController";
+		return "/widgets/ListController";
 	}
 
 }

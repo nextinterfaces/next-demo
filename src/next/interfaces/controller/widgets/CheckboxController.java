@@ -43,39 +43,39 @@ public class CheckboxController extends GitXController {
 		XCheckbox check1 = new XCheckbox("Green", "Green");
 		XCheckbox check2 = new XCheckbox("Blue", "Blue");
 
-		final XCheckboxGroup group1 = new XCheckboxGroup(true);
-		group1.add(check0, check1, check2);
+		final XCheckboxGroup groupVertical = new XCheckboxGroup(true);
+		groupVertical.add(check0, check1, check2);
 
 		XCheckbox checkA = new XCheckbox("Red", "Red");
 		XCheckbox checkB = new XCheckbox("Green", "Green");
 		XCheckbox checkC = new XCheckbox("Blue", "Blue");
-		final XCheckboxGroup group2 = new XCheckboxGroup(false);
-		group2.add(checkA, checkB, checkC);
+		final XCheckboxGroup groupHorizontal = new XCheckboxGroup(false);
+		groupHorizontal.add(checkA, checkB, checkC);
 
 		final XLabel label1 = new XLabel("Favorite color", XLabelType.Header);
 		final XLabel label2 = new XLabel("Favorite color", XLabelType.Header);
 
-		panel.addWidgets(label2, group2, label1, group1, new HTML("&nbsp;"));
+		panel.addWidgets(label2, groupHorizontal, label1, groupVertical, new HTML("&nbsp;"));
 
 		check0.setValue(true);
 		check1.setValue(true);
 		checkA.setValue(true);
 		checkC.setValue(true);
 		
-		group1.addSelectionChangedHandler(new SelectionChangedHandler() {
+		groupVertical.addSelectionChangedHandler(new SelectionChangedHandler() {
 			public void onSelectionChanged(SelectionChangedEvent e) {
 				String s = "Favorite color: ";
-				for (XCheckbox c : group1.getCheckedWidgets()) {
+				for (XCheckbox c : groupVertical.getCheckedWidgets()) {
 					s += c.getName() + ", ";
 				}
 				label1.setText(s);
 			}
 		});
 
-		group2.addSelectionChangedHandler(new SelectionChangedHandler() {
+		groupHorizontal.addSelectionChangedHandler(new SelectionChangedHandler() {
 			public void onSelectionChanged(SelectionChangedEvent e) {
 				String s = "Favorite color: ";
-				for (XCheckbox c : group2.getCheckedWidgets()) {
+				for (XCheckbox c : groupHorizontal.getCheckedWidgets()) {
 					s += c.getName() + ", ";
 				}
 				label2.setText(s);

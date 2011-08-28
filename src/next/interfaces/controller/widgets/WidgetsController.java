@@ -20,13 +20,8 @@ import next.i.view.CellData;
 import next.i.view.TableData;
 import next.i.view.XTableCell;
 import next.i.view.XTableView;
-import next.interfaces.controller.DemoUtils;
-import next.interfaces.views.CustomListController;
-import next.interfaces.views.NavigationBarController;
 
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.ui.Image;
+import com.google.gwt.user.client.ui.SimplePanel;
 
 public class WidgetsController extends XTableController {
 
@@ -34,39 +29,38 @@ public class WidgetsController extends XTableController {
 
 		setTitle("NEXT widgets");
 
-		getNavigationBar().setRightTitle("Source");
-		getNavigationBar().getRightButton().addClickHandler(new ClickHandler() {
-			public void onClick(ClickEvent event) {
-				DemoUtils.openGit(getGitPath());
-			}
-		});
+		// getNavigationBar().setRightTitle("Source");
+		// getNavigationBar().getRightButton().addClickHandler(new ClickHandler() {
+		// public void onClick(ClickEvent event) {
+		// DemoUtils.openGit(getGitPath());
+		// }
+		// });
 
 		((XTableView) getView()).showChevron(true);
 
 		TableData tableDS = new TableData();
-		
-		
-		tableDS.add(
-				new CellData(createImage("images/icons/i-list.png"), "Lists", null),
-				new CellData(createImage("images/icons/i-slider.png"), "Slider", null),
-				new CellData(createImage("images/icons/i-radio.png"), "Radio Button", null),
-				new CellData(createImage("images/icons/i-button.png"), "Buttons", null),
-				new CellData(createImage("images/icons/i-picker.png"), "Picker", null),
-				new CellData(createImage("images/icons/i-switch.png"), "Switch", null),
-				new CellData(createImage("images/icons/i-form.png"), "Form", null),
-				new CellData(createImage("images/icons/i-progress.png"), "Progress", null),
-				new CellData(createImage("images/icons/i-checkbox.png"), "CheckBox", null),
-				new CellData(createImage("images/icons/i-image.png"), "Label and Image", null),
-				new CellData(createImage("images/icons/i-navigation.png"), "Navigation", null)
+
+		tableDS.add(new CellData(createImage("images/icons/i-list.png"), "Lists", null), new CellData(
+				createImage("images/icons/i-slider.png"), "Slider", null), new CellData(
+				createImage("images/icons/i-radio.png"), "Radio Button", null), new CellData(
+				createImage("images/icons/i-button.png"), "Buttons", null), new CellData(
+				createImage("images/icons/i-picker.png"), "Picker", null), new CellData(
+				createImage("images/icons/i-switch.png"), "Switch", null), new CellData(createImage("images/icons/i-form.png"),
+				"Form", null), new CellData(createImage("images/icons/i-progress.png"), "Progress", null), new CellData(
+				createImage("images/icons/i-checkbox.png"), "CheckBox", null), new CellData(
+				createImage("images/icons/i-image.png"), "Label and Image", null), new CellData(
+				createImage("images/icons/i-navigation.png"), "Navigation", null)
+		// new CellData(createImage("images/icons/i-TODO.png"), "Popup", null)
 				);
-//				, "Slide"
+		// , "Slide"
 
 		initDataSource(tableDS);
 	}
-	
-	private Image createImage(String url){
-		Image img = new Image(url);
+
+	private SimplePanel createImage(String url) {
+		SimplePanel img = new SimplePanel();
 		img.setSize("30px", "30px");
+		img.getElement().getStyle().setProperty("backgroundImage", "url('" + url + "')");
 		return img;
 	}
 
@@ -74,8 +68,9 @@ public class WidgetsController extends XTableController {
 	public void onRowSelected(int indexSelected, CellData cellDataSelected, XTableCell tableCell) {
 
 		if (indexSelected == 0) {
-//			getNavigationController().pushController(new DragViewController(), true);
-			getNavigationController().pushController(new CustomListController(), true);
+			// getNavigationController().pushController(new DragViewController(),
+			// true);
+			getNavigationController().pushController(new ListController(), true);
 
 		} else if (indexSelected == 1) {
 			getNavigationController().pushController(new SliderController(), true);
@@ -84,7 +79,7 @@ public class WidgetsController extends XTableController {
 			getNavigationController().pushController(new RadioButtonController(), true);
 
 		} else if (indexSelected == 3) {
-			getNavigationController().pushController(new ButtonsController (), true);
+			getNavigationController().pushController(new ButtonsController(), true);
 
 		} else if (indexSelected == 4) {
 			getNavigationController().pushController(new PickerController(), true);
@@ -109,10 +104,10 @@ public class WidgetsController extends XTableController {
 
 		} else if (indexSelected == 11) {
 			getNavigationController().pushController(new PopupController(), true);
-			
+
 		} else if (indexSelected == 100) {
-//			getNavigationController().pushController(new SlideController(), true);
-			
+			// getNavigationController().pushController(new SlideController(), true);
+
 		}
 
 	}

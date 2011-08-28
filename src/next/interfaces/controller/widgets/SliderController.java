@@ -52,8 +52,8 @@ public class SliderController extends GitXController {
 	private void addHandlers(final Label label, XSlider... sliders) {
 		for (final XSlider s : sliders) {
 			s.addValueChangeHandler(new ValueChangeHandler<Integer>() {
-				public void onValueChange(ValueChangeEvent<Integer> event) {
-					label.setText("Slided at: " + s.getValue() + "%");
+				public void onValueChange(ValueChangeEvent<Integer> e) {					
+					label.setText("Slided at: " + e.getValue() + "%");
 				}
 			});
 		}

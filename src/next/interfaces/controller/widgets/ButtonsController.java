@@ -42,8 +42,8 @@ public class ButtonsController extends GitXController {
 		CellData d3 = new CellData(null, "Blue", new XButton("Blue", XButtonType.NavigationBlue));
 		CellData d4 = new CellData(null, "Red", new XButton("Red", XButtonType.NavigationRed));
 		CellData d5 = new CellData(null, "Black", new XButton("Black", XButtonType.NavigationBlack));
-		CellData d6 = new CellData(null, "Image", new XButton("Left", XButtonType.Image, "images/icons/xbuttonImage.png", "images/icons/xbuttonImageSelected.png", true));
-		CellData d7 = new CellData(null, "Image", new XButton("Right", XButtonType.Image, "images/icons/xbuttonImage.png", "images/icons/xbuttonImageSelected.png", false));
+		CellData d6 = new CellData(null, "Image button", new XButton("Left", XButtonType.Image, "images/icons/xbuttonImage.png", "images/icons/xbuttonImageSelected.png", true));
+		CellData d7 = new CellData(null, "Image button", new XButton("Right", XButtonType.Image, "images/icons/xbuttonImage.png", "images/icons/xbuttonImageSelected.png", false));
 		
 		XTableView tableView = new XTableView();
 		tableView.addItem(new XTableCell(d0), new XTableCell(d1), new XTableCell(d2), new XTableCell(d3),

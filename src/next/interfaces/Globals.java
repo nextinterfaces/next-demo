@@ -18,5 +18,6 @@ package next.interfaces;
 public interface Globals {
 
 	String GIT_HOST = "https://github.com/nextinterfaces/next-demo/tree/master/src/next/interfaces";
+	String SOURCE_PATH = "code/$.js";
 
 }

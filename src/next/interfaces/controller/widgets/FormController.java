@@ -35,7 +35,7 @@ public class FormController extends GitXController {
 		XFlexTable panel = new XFlexTable(null, "#fff");
 		panel.setCellSpacing(0); 
 
-		XTextField text = new XTextField("Text", null);
+		XTextField text = new XTextField("Text");
 		XTextField password = new XTextField("Password", XTextFieldType.PASSWORD);
 		XTextField email = new XTextField("Email", XTextFieldType.EMAIL);
 		XTextField number = new XTextField("Number", XTextFieldType.NUMBER);

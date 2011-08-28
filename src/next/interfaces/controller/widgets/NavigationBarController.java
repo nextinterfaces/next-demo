@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package next.interfaces.views;
+package next.interfaces.controller.widgets;
 
 import next.i.view.XBarItem.Type;
 import next.i.view.XNavigationBar;
@@ -81,7 +81,7 @@ public class NavigationBarController extends GitXController {
 	}
 
 	public String getGitPath() {
-		return "/views/NavigationBarController";
+		return "/widgets/NavigationBarController";
 	}
 
 }

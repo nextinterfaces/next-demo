@@ -2,6 +2,7 @@
 <module rename-to='nextdemo'>
 
 	<inherits name='com.google.gwt.user.User' />
+	<inherits name='com.google.gwt.http.HTTP' />
 
 	<inherits name='next.interfaces' />
 

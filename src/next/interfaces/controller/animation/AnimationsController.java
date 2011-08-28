@@ -15,14 +15,15 @@
  */
 package next.interfaces.controller.animation;
 
+import next.i.controller.XController;
+import next.i.controller.XTableController;
 import next.i.util.Utils;
 import next.i.view.CellData;
 import next.i.view.TableData;
 import next.i.view.XTableCell;
 import next.i.view.XTableView;
-import next.interfaces.controller.GitXTableController;
 
-public class AnimationsController extends GitXTableController {
+public class AnimationsController extends XTableController {
 
 	private SlideController slideCtrl;
 
@@ -38,6 +39,11 @@ public class AnimationsController extends GitXTableController {
 				"Vertical Scroll", "Drag Scroll");
 
 		initDataSource(tableDS);
+	}
+
+	@Override
+	public Scroll getScrollOrientation() {
+		return XController.Scroll.VERTICAL;
 	}
 
 	@Override
@@ -82,7 +88,7 @@ public class AnimationsController extends GitXTableController {
 		} else if (indexSelected == 8) {
 			VerticalController ctrl = new VerticalController();
 			getNavigationController().pushController(ctrl, true);
-			
+
 		} else if (indexSelected == 9) {
 			DragController ctrl = new DragController();
 			getNavigationController().pushController(ctrl, true);
