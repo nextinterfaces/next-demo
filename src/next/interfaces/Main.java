@@ -22,73 +22,18 @@ import next.i.HistoryController;
 import next.i.controller.XNavigationController;
 import next.i.controller.XTabBarController;
 import next.i.controller.XTabController;
-import next.i.view.XDragScrollView;
-import next.i.view.widgets.XButton;
-import next.i.view.widgets.XPopup;
 import next.interfaces.controller.animation.AnimationsController;
 import next.interfaces.controller.widgets.WidgetsController;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.Scheduler;
 import com.google.gwt.core.client.Scheduler.ScheduledCommand;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.RootPanel;
 
 public class Main implements EntryPoint {
 
 	public void onModuleLoad() {
-
-//		HTML div = new HTML("[___HTML___]");
-////		div.setStyleName("dragDiv");
-////		XHorizontalScrollView dragPanel = new XHorizontalScrollView();
-//		XDragScrollView dragPanel = new XDragScrollView();
-//		dragPanel.addStyleName("xpopup");
-//		dragPanel.add(div);
-////		dragPanel.add(new Image("images/icons/simpsonXY.jpg"));
-//		
-//		final XPopup3 popup = new XPopup3();
-//		popup.setWidget(dragPanel);
-////		popup.center();
-//		popup.setTop("5em");
-//		popup.setBottom("5em");
-//		popup.setLeft("5em");
-//		popup.setRight("5em");
-//
-//		XButton btn = new XButton("Open");
-//		btn.addClickHandler(new ClickHandler() {
-//			public void onClick(ClickEvent event) {
-//				popup.show();
-//			}
-//		});
-//		RootLayoutPanel.get().add(new HTML("<p style='border: 1px solid #333; padding: 50px;'>[______DIV 1________]"));
-//		RootLayoutPanel.get().add(btn); //new HTML("<p style='border: 1px solid #ff55ff; padding: 50px;'>[______DIV 2________]"));
-//		
-//		popup.show();
-		
-//		SimplePanel wrapper = new SimplePanel();
-//		wrapper.setStyleName("scrollWrapper");
-//		wrapper.setWidget(dragPanel);
-//		RootLayoutPanel.get().add(wrapper);
-////		RootLayoutPanel.get().add(view);
-//
-//		final XPopup2 popup = new XPopup2();
-//		popup.setWidget(dragPanel);
-//		popup.setTop(20.0, Unit.PCT);
-//		popup.setRight(20., Unit.PCT);
-//		popup.setBottom(20., Unit.PCT);
-//		popup.setLeft(20., Unit.PCT);
-//		popup.show();
-//		XButton btn = new XButton("Open");
-//		btn.addClickHandler(new ClickHandler() {
-//			public void onClick(ClickEvent event) {
-//				popup.show();
-//			}
-//		});
-//		RootLayoutPanel.get().add(btn);
 		
 		Scheduler.get().scheduleDeferred(new ScheduledCommand() {
 			@Override
