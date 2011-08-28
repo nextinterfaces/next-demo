@@ -36,25 +36,25 @@ public class ListController extends GitXController {
 	public IsWidget getViewContent() {
 
 		CellData data = new CellData();
-		data.setWestWidgets(new Image("images/icons/list0.png"));
+		data.setWestWidgets(new Image("images/icons/list00.png"));
 		data.setTextWidgets(new Label("Ariplane Mode"));
 		data.setEastWidgets(new XSwitch(true));
 		XTableCell c0 = new XTableCell(data);
 
 		data = new CellData();
-		data.setWestWidgets(new Image("images/icons/list1.png"));
+		data.setWestWidgets(new Image("images/icons/list01.png"));
 		data.setTextWidgets(new Label("WI-FI"));
 		data.setEastWidgets(new Image("images/icons/list1x.png"));
 		XTableCell c1 = new XTableCell(data);
 
 		data = new CellData();
-		data.setWestWidgets(new Image("images/icons/list2.png"));
+		data.setWestWidgets(new Image("images/icons/list02.png"));
 		data.setTextWidgets(new Label("Notifications"));
 		data.setEastWidgets(new Image("images/icons/list2x.png"));
 		XTableCell c2 = new XTableCell(data);
 
 		data = new CellData();
-		data.setWestWidgets(new Image("images/icons/list3.png"));
+		data.setWestWidgets(new Image("images/icons/list03.png"));
 		data.setTextWidgets(new Label("Sound"));
 		data.setEastWidgets(new XSlider(60));
 		XTableCell c3 = new XTableCell(data);
