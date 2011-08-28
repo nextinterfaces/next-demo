@@ -6,9 +6,10 @@
 	-webkit-touch-callout: none;
 	cursor: default;
 	-webkit-tap-highlight-color: RGBA(0, 0, 0, 0);
+	-webkit-text-size-adjust: none;
 }
 
-html,body {
+html, body {
 	height: 100%;
 	overflow: hidden;
 	margin: 0;
@@ -22,6 +23,15 @@ p,div,span,td { /* This disables inputs and textarea */
 
 body {
 	background: #6D84A2;
+}
+
+code, pre {
+	font-size: .9em;
+}
+
+code, pre, pre * {
+	font-family: Menlo, Monaco, Courier, monospace;
+	-webkit-user-select: text;
 }
 
 .navigationContent {
@@ -1026,10 +1036,26 @@ input::-webkit-outer-spin-button {
 	box-shadow: RGBA(0, 0, 0, 0.8) 0 0.2em 0.6em;
 }
 
-.xpopup pre {
-	text-align: left;
-	color: #666;
+
+
+/*
+ ************************************************
+ Bellow is a custom DEMO CSS and should not be used
+ ************************************************
+ */
+
+.codeDemo {
+	border: .3em solid #fff;	
 }
+.codeDemo pre {
+	text-align: left;
+	color: #000;
+}
+.codeDemo .codeWord {	color: #2361DE; }
+.codeDemo .codeQuot {	color: #008200; }
+.codeDemo .codeJSNI {	color: #DD8261;	}
+.codeDemo .codeGray { color: #aaa; }
+.codeDemo .codePink { color: #FF1493; }
 
 /******* Borrowed from gwtmobile-ui ****** TODO cleanup
 
