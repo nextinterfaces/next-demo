@@ -15,9 +15,6 @@
  */
 package next.interfaces;
 
-/**
- * Main entry point class
- */
 import next.i.HistoryController;
 import next.i.controller.XNavigationController;
 import next.i.controller.XTabBarController;
@@ -29,12 +26,16 @@ import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.Scheduler;
 import com.google.gwt.core.client.Scheduler.ScheduledCommand;
 import com.google.gwt.user.client.ui.Image;
+import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.RootPanel;
 
+/**
+ * Main entry point class
+ */
 public class Main implements EntryPoint {
 
 	public void onModuleLoad() {
-		
+
 		Scheduler.get().scheduleDeferred(new ScheduledCommand() {
 			@Override
 			public void execute() {
@@ -47,12 +48,13 @@ public class Main implements EntryPoint {
 
 				XTabBarController tabBarController = new XTabBarController();
 				tabBarController.addControllers(tabWidgetsCtrl, tabAnimeCtrl);
+				tabBarController.attach(RootLayoutPanel.get());
 
 				RootPanel.get("loading").setVisible(false);
 
 				new HistoryController().register("start");
 			}
 		});
-		
+
 	}
 }
