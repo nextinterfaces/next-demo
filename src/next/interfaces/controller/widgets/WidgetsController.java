@@ -20,10 +20,17 @@ import next.i.view.CellData;
 import next.i.view.TableData;
 import next.i.view.XTableCell;
 import next.i.view.XTableView;
+import next.interfaces.rpc.HelloService;
+import next.interfaces.rpc.HelloServiceAsync;
 
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.SimplePanel;
 
 public class WidgetsController extends XTableController {
+
+	private final HelloServiceAsync helloRPC = GWT.create(HelloService.class);
 
 	public WidgetsController() {
 
@@ -108,6 +115,16 @@ public class WidgetsController extends XTableController {
 		} else if (indexSelected == 100) {
 			// getNavigationController().pushController(new SlideController(), true);
 
+			// featuring RPC call
+			helloRPC.sayHello("NEXT rocks!", new AsyncCallback<String>() {
+				public void onFailure(Throwable e) {
+					Window.alert("Error happened: " + e.getMessage());
+				}
+
+				public void onSuccess(String result) {
+					Window.alert("Server said \"" + result + "\".");
+				}
+			});
 		}
 
 	}

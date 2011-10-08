@@ -5,6 +5,17 @@
 
 <web-app>
   
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>helloServlet</servlet-name>
+    <servlet-class>next.server.HelloServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>helloServlet</servlet-name>
+    <url-pattern>/nextdemo/hello</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
