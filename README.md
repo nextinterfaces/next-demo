@@ -1,7 +1,7 @@
 NEXT
 ====
 
-`next-demo` is a concept featuring [next](https://github.com/nextinterfaces/next) framework for developing Native Looking HTML5 Mobile apps for SmartPhones and Tablets. 
+`next-demo` is a concept featuring [next framework](https://github.com/nextinterfaces/next) for developing Native Looking HTML5 Mobile apps for SmartPhones and Tablets. 
 
 ### More information:
 http://nextinterfaces.com/
