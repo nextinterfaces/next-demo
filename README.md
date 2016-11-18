@@ -80,7 +80,7 @@ Documentation:
 http://nextinterfaces.com/start
 
 
-![alt tag](http://nextinterfaces.com/i/next-simulator.png)
+![alt tag](http://nextinterfaces.com/i/next-simulator_1.png)
 
 
 
